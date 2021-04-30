@@ -1,0 +1,137 @@
+.sidebar-wrapper {
+  height: 100%;
+  width: 120px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  background-color: white;
+  border-right: 2px solid #53B5CD;
+}
+
+.sidebar {
+  display: flex;
+  flex-wrap: wrap;
+}
+.sidebar__letter-block {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 118px;
+  border-bottom: 2px solid #53B5CD;
+}
+.sidebar--letter {
+  color: #53B5CD;
+  font-weight: bold;
+  font-size: 50px;
+}
+.sidebar__nav-block {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid #53B5CD;
+}
+.sidebar__nav-list {
+  padding: 0;
+}
+.sidebar__list-item {
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+}
+.sidebar__list-item:hover {
+  text-decoration: underline;
+}
+.sidebar__contact {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  border-bottom: 2px solid #53B5CD;
+}
+.sidebar__social-wrapper {
+  height: 40px;
+  width: 100px;
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sidebar__social-div {
+  flex-basis: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+main {
+  margin-left: 120px;
+}
+
+footer {
+  margin-left: 120px;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* /CSS reset */
