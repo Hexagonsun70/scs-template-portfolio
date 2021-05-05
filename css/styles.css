@@ -73,8 +73,8 @@ footer {
   top: 0;
   left: 0;
   overflow-x: hidden;
-  background-color: white;
-  border-right: 2px solid #53B5CD;
+  background-color: #232d3a;
+  border-right: 2px solid #e5aa8c;
 }
 
 .sidebar {
@@ -87,10 +87,10 @@ footer {
   justify-content: center;
   align-items: center;
   height: 118px;
-  border-bottom: 2px solid #53B5CD;
+  border-bottom: 2px solid #e5aa8c;
 }
 .sidebar--letter {
-  color: #53B5CD;
+  color: #e5aa8c;
   font-weight: bold;
   font-size: 50px;
 }
@@ -100,7 +100,7 @@ footer {
   justify-content: center;
   align-items: center;
   height: 160px;
-  border-bottom: 2px solid #53B5CD;
+  border-bottom: 2px solid #e5aa8c;
 }
 .sidebar__nav-list {
   padding: 0;
@@ -110,7 +110,7 @@ footer {
   display: flex;
   justify-content: center;
   font-size: 12px;
-  color: black;
+  color: #e5aa8c;
   font-family: "DM Sans", sans-serif;
   font-weight: 500;
   letter-spacing: 1.2;
@@ -124,10 +124,10 @@ footer {
   justify-content: center;
   align-items: center;
   height: 40px;
-  border-bottom: 2px solid #53B5CD;
+  border-bottom: 2px solid #e5aa8c;
 }
 .sidebar--contact {
-  color: black;
+  color: #e5aa8c;
   font-family: "DM Sans", sans-serif;
 }
 .sidebar__social-wrapper {
@@ -144,20 +144,20 @@ footer {
   justify-content: space-between;
 }
 .sidebar--icons {
-  color: #53B5CD;
+  color: #e5aa8c;
 }
 
 .hero-wrapper {
-  background-image: url(../img/abstract-oil-blue.jpg);
+  background-image: url(../img/abstract-oil-dark.jpg);
   width: 100%;
-  height: 500px;
+  height: 100vh;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .hero {
-  height: 500px;
+  height: 100vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -170,9 +170,15 @@ footer {
   align-items: center;
   justify-content: flex-end;
 }
+.hero__foot-text, .hero__foot-arrow {
+  margin-bottom: 5px;
+}
 .hero--title, .hero--subtitle, .hero--foot-text, .hero--foot-arrow {
-  color: white;
+  font-weight: 600;
+  color: #e5aa8c;
   font-family: "DM Sans";
+  text-align: center;
+  text-shadow: #232d3a 0px 0px 40px;
 }
 .hero--title {
   font-size: 40px;
@@ -181,9 +187,97 @@ footer {
 .hero--subtitle {
   font-size: 25px;
 }
-.hero--foot-text {
+
+.card-aligner {
+  height: 100%;
+  width: 100%;
+  background-color: #232d3a;
+}
+
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #232d3a;
+  padding: 5px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  height: 300px;
+  border-radius: 5px;
+  margin: 5px;
+}
+.card__img {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  background-image: url(../img/ioccc_donut_small.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.card__img, .card__title, .card__link {
   margin-bottom: 5px;
 }
-.hero--foot-arrow {
-  margin-bottom: 5px;
+.card__title, .card__link {
+  width: 100%;
+  text-align: left;
+  color: #e5aa8c;
+  font-family: "DM Sans", sans-serif;
+}
+.card__title {
+  font-weight: 500;
+  font-size: 20px;
+}
+.card__link {
+  color: #748E54;
+  margin-left: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+}
+.card__arrow {
+  font-size: 15px;
+}
+
+.footer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  background-color: #232d3a;
+  font-family: "DM Sans", sans-serif;
+  color: #e5aa8c;
+  flex-wrap: wrap;
+}
+.footer__text-div, .footer__form {
+  flex-basis: 100%;
+}
+.footer__text-div {
+  padding: 10px;
+}
+.footer__header, .footer--email, .footer--number, .footer__p {
+  margin-bottom: 10px;
+}
+.footer__email-number {
+  display: flex;
+  flex-direction: column;
+}
+.footer--email, .footer--number {
+  color: #748E54;
+}
+.footer__form {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer__form-field3, .footer__form-field4, .footer__form-field5 {
+  flex-basis: 100%;
+  width: 100%;
+}
+.footer__form-field1, .footer__form-field2 {
+  flex-basis: 50%;
+  width: 50%;
 }

@@ -1,0 +1,74 @@
+@use "../abstracts" as *;
+
+// Portfolio Project Cards
+.card-aligner {
+  height: 100%;
+  width: 100%;
+  background-color: $sb-bg-col;
+}
+.card-wrapper {
+  display: flex;
+  flex-wrap:  wrap;
+  justify-content: center;
+  background-color: $sb-bg-col;
+  padding: 5px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // flex-basis: 100%;
+  width: 250px;
+  height: 300px;
+  // border: 1px solid $sb-font-col;
+  border-radius: 5px;
+  margin: 5px;
+
+  &__img {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    background-image: url(../img/ioccc_donut_small.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  }
+
+  &__flex-break {
+    // @media
+    // flex-basis: 100%;
+  }
+
+  &__img,
+  &__title,
+  &__link {
+    margin-bottom: 5px;
+  }
+
+  &__title,
+  &__link {
+    width: 100%;
+    text-align: left;
+    color: $sb-font-col;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+  &__link {
+    color: $crd-highlight;
+    margin-left: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__arrow {
+    font-size: 15px;
+  }
+}
