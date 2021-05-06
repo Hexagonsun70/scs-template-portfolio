@@ -4,14 +4,18 @@
 .card-aligner {
   height: 100%;
   width: 100%;
-  background-color: $sb-bg-col;
+  background-color: $bg-col;
+  padding: 20px 0;
+  box-shadow: inset 0 0 12px black;
 }
 .card-wrapper {
   display: flex;
   flex-wrap:  wrap;
   justify-content: center;
-  background-color: $sb-bg-col;
+  background-color: $bg-col;
   padding: 5px;
+  margin: 10px;
+  overflow: visible;
 }
 
 .card {
@@ -19,11 +23,15 @@
   flex-direction: column;
   align-items: center;
   // flex-basis: 100%;
-  width: 250px;
+  width: 100%;
   height: 300px;
-  // border: 1px solid $sb-font-col;
+  background-color: $sb-bg-col;
   border-radius: 5px;
-  margin: 5px;
+  margin: 10px;
+  box-shadow: 0 0 12px black;
+  @media (min-width: $mobile) {
+    width: 270px;
+  }
 
   &__img {
     height: 100%;
@@ -33,8 +41,18 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
   }
+
+  &--img-grow {
+    transition: all .25s ease-in-out;
+  }
+
+  &--img-grow:hover {
+    transform: scale(1.05);
+    opacity: 0.5;
+    position: relative;
+  }
+
 
   &__flex-break {
     // @media
@@ -42,9 +60,9 @@
   }
 
   &__img,
-  &__title,
+  // &__title,
   &__link {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
 
   &__title,
@@ -56,13 +74,14 @@
   }
 
   &__title {
+    margin: 0 0 5px 15px;
     font-weight: 500;
     font-size: 20px;
   }
 
   &__link {
     color: $crd-highlight;
-    margin-left: 20px;
+    margin-left: 30px;
     height: 20px;
     display: flex;
     align-items: center;

@@ -80,11 +80,12 @@
 
 <!-- Hero Image End -->
 <!-- Project Cards Start  -->
+
     <div class="card-aligner">
       <div class="card-wrapper">
 
         <div class="card">
-          <div class="card__img card__img1"><a href="#"></a></div>
+          <div class="card__img card__img1 card--img-grow"><a href="#"></a></div>
           <h3 class="card__title">Project One </h3>
           <a href="" class="card__link">View Project&nbsp;
             <i class="fas fa-arrow-right card__arrow"></i>
@@ -92,7 +93,7 @@
         </div>
 
         <div class="card">
-          <div class="card__img card__img2"><a href="#"></a></div>
+          <div class="card__img card__img2 card--img-grow"><a href="#"></a></div>
           <h3 class="card__title">Project Two</h3>
           <a href="" class="card__link">View Project&nbsp;
             <i class="fas fa-arrow-right card__arrow"></i>
@@ -100,7 +101,7 @@
         </div>
 
         <div class="card">
-          <div class="card__img card__img3"></div>
+          <div class="card__img card__img3 card--img-grow"></div>
           <h3 class="card__title">Project Three</h3>
           <a href="" class="card__link">View Project&nbsp;
             <i class="fas fa-arrow-right card__arrow"></i>
@@ -110,7 +111,7 @@
         <div class="card__flex-break"></div>
 
         <div class="card">
-          <div class="card__img card__img4"></div>
+          <div class="card__img card__img4 card--img-grow" ></div>
           <h3 class="card__title">Project Four</h3>
           <a href="" class="card__link">View Project&nbsp;
             <i class="fas fa-arrow-right card__arrow"></i>
@@ -118,7 +119,7 @@
         </div>
 
         <div class="card">
-          <div class="card__img card__img5"></div>
+          <div class="card__img card__img5 card--img-grow"></div>
           <h3 class="card__title">Project Five</h3>
           <a href="" class="card__link">View Project&nbsp;
             <i class="fas fa-arrow-right card__arrow"></i>
@@ -126,7 +127,7 @@
         </div>
 
         <div class="card">
-          <div class="card__img card__img6"></div>
+          <div class="card__img card__img6 card--img-grow"></div>
           <h3 class="card__title">Project Six</h3>
           <a href="" class="card__link">View Project&nbsp;
             <i class="fas fa-arrow-right card__arrow"></i>
@@ -143,16 +144,20 @@
 <footer>
   <div class="footer">
     <div class="footer__text-div">
-      <h2 class="footer__header"> Get in Touch</h2>
-      <p class="footer__p">
+      <h2 class="footer__header footer--header"> Get in Touch</h2>
+      <p class="footer__p footer--p">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus
         commodi tempora voluptas sunt maiores!
       </p>
       <div class="footer__email-number">
-        <a href="" class="footer--number">07776 795 786</a>
-        <a href="" class="footer--email">alex.mckendrick@gmail.com</a>
+        <a href="" class="footer__number footer--number">
+          07776 795 786
+        </a>
+        <a href="" class="footer__email footer--email">
+          alex.mckendrick@gmail.com
+        </a>
       </div>
-      <p class="footer__p">
+      <p class="footer__p footer--p">
          Lorem ipsum dolor sit amet, consectetur adipisicing
          elit. Ratione ullam, earum quod maxime molestias deleniti adipisci!
          Fugit laboriosam temporibus accusantium, incidunt dignissimos odio.
@@ -160,12 +165,23 @@
       </p>
     </div>
     <div class="footer__form">
-      <input type="text" class="footer__form-field footer__form-field1">
-      <input type="text" class="footer__form-field footer__form-field2">
-      <input type="text" class="footer__form-field footer__form-field3">
-      <input type="text" class="footer__form-field footer__form-field4">
-      <input type="text" class="footer__form-field footer__form-field5">
-      <button class="btn"></button>
+      <div class="footer__field-container-duel">
+        <input type="text" value="First Name*" class="footer__form-field footer__form-field1">
+        <input type="text" value="Last Name*" class="footer__form-field footer__form-field2">
+      </div>
+      <div class="footer__field-container">
+        <input type="email" value="Email*" class="footer__form-field footer__form-field3">
+      </div>
+      <div class="footer__field-container">
+        <input type="text" value="Subject*" class="footer__form-field footer__form-field4">
+      </div>
+      <div class="footer__field-container footer__field-container-big">
+        <textarea placeholder="Message" row="40" col="40" class="footer__form-field footer__form-field5">
+        </textarea>
+      </div>
+      <div class="footer__btn-div">
+        <input type="button" value="Submit" class="btn"></input>
+      </div>
     </div>
   </div>
 </footer>
