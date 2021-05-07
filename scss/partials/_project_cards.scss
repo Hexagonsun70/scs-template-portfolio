@@ -7,6 +7,8 @@
   background-color: $bg-col;
   padding: 20px 0;
   box-shadow: inset 0 0 12px black;
+  display: flex;
+  justify-content: center;
 }
 .card-wrapper {
   display: flex;
@@ -24,14 +26,12 @@
   align-items: center;
   // flex-basis: 100%;
   width: 100%;
+  max-width: 350px;
   height: 300px;
-  background-color: $sb-bg-col;
-  border-radius: 5px;
+  background-color: $card-bg-col;
+  border-radius: 5px 5px 0 0 ;
   margin: 10px;
   box-shadow: 0 0 12px black;
-  @media (min-width: $mobile) {
-    width: 270px;
-  }
 
   &__img {
     height: 100%;
@@ -90,4 +90,30 @@
   &__arrow {
     font-size: 15px;
   }
+}
+
+.card {
+  @media (min-width:$mobile) {
+  }
+  @media (min-width:$tablet) {
+  }
+  @media (min-width:$medium) {
+  }
+  @media (min-width:$large) {
+  }
+
+}
+
+.card-wrapper {
+  @media (min-width:$mobile) {
+  }
+  @media (min-width:$tablet) {
+    width: 760px;
+  }
+  @media (min-width:$medium) {
+    width: 1170px;
+  }
+  @media (min-width:$large) {
+  }
+
 }

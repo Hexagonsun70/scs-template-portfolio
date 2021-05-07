@@ -26,7 +26,7 @@
 
   &__foot-text,
   &__foot-arrow {
-    margin-bottom: 5px;
+    margin-bottom: 7px;
   }
 
   &--title,
@@ -49,5 +49,48 @@
     font-size: 25px;
   }
 
+  &--foot-text,
+  &--foot-arrow {
+    font-size: 15px;
+  }
+
+  &--title {
+    @media (min-width:$mobile) {
+      font-size: 45px;
+    }
+    @media (min-width:$tablet) {
+      font-size: 50px;
+    }
+    @media (min-width:$medium) {
+      font-size: 60px;
+    }
+    @media (min-width:$large) {
+      font-size: 80px;
+    }
+  }
+
+  &--subtitle {
+    @media (min-width:$mobile) {
+      font-size: 25px;
+    }
+    @media (min-width:$tablet) {
+      font-size: 30px;
+    }
+    @media (min-width:$medium) {
+      font-size: 40px;
+    }
+    @media (min-width:$large) {
+      font-size: 60px;
+    }
+  }
+
+  &--foot-text,
+  &--foot-arrow {
+    @media (min-width:$medium) {
+      font-size: 25px;
+    }
+    @media (min-width:$large) {
+    }
+  }
 
 }

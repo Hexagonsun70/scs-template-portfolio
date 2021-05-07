@@ -45,10 +45,15 @@
 
       <div class="sidebar__social-wrapper">
         <div class="sidebar__social-div">
-          <div><a href="#"><i class="sidebar--icons fab fa-facebook-f"></i></a></div>
+          <div>
+            <a href="https://github.com/Hexagonsun70">
+              <i class="sidebar--icons fab fa-github"></i>
+            </a>
+          </div>
+          <!-- <div><a href="#"><i class="sidebar--icons fab fa-facebook-f"></i></a></div>
           <div><a href="#"><i class="sidebar--icons fab fa-instagram"></i></a></div>
           <div><a href="#"><i class="sidebar--icons fab fa-twitter"></i></a></div>
-          <div><a href="#"><i class="sidebar--icons fab fa-linkedin-in"></i></a></div>
+          <div><a href="#"><i class="sidebar--icons fab fa-linkedin-in"></i></a></div> -->
         </div>
       </div>
 
@@ -59,7 +64,7 @@
 <!-- Hero Image Start -->
 
   <main>
-    <div class="hero-wrapper">
+    <div class="hero-wrapper" id="hero">
       <div class="hero">
         <div class="hero__header">
           <h1 class="hero--title">Alex McKendrick</h1>
@@ -67,10 +72,10 @@
         </div>
         <div class="hero__footer">
             <div class="hero__foot-text">
-              <a href="#" class="hero--foot-text ">Scroll Down</a>
+              <a href="#cards" class="hero--foot-text ">Scroll Down</a>
             </div>
             <div class="hero__foot-arrow">
-              <a href="#">
+              <a href="#cards">
                 <i class="hero--foot-arrow fas fa-arrow-down"></i>
               </a>
             </div>
@@ -81,11 +86,11 @@
 <!-- Hero Image End -->
 <!-- Project Cards Start  -->
 
-    <div class="card-aligner">
+    <div class="card-aligner" id="cards">
       <div class="card-wrapper">
 
         <div class="card">
-          <div class="card__img card__img1 card--img-grow"><a href="#"></a></div>
+          <a href="#" class="card__img card__img1 card--img-grow"></a>
           <h3 class="card__title">Project One </h3>
           <a href="" class="card__link">View Project&nbsp;
             <i class="fas fa-arrow-right card__arrow"></i>
@@ -93,7 +98,7 @@
         </div>
 
         <div class="card">
-          <div class="card__img card__img2 card--img-grow"><a href="#"></a></div>
+          <a href="#" class="card__img card__img2 card--img-grow"></a>
           <h3 class="card__title">Project Two</h3>
           <a href="" class="card__link">View Project&nbsp;
             <i class="fas fa-arrow-right card__arrow"></i>
@@ -101,7 +106,7 @@
         </div>
 
         <div class="card">
-          <div class="card__img card__img3 card--img-grow"></div>
+          <a href="" class="card__img card__img3 card--img-grow"></a>
           <h3 class="card__title">Project Three</h3>
           <a href="" class="card__link">View Project&nbsp;
             <i class="fas fa-arrow-right card__arrow"></i>
@@ -111,7 +116,7 @@
         <div class="card__flex-break"></div>
 
         <div class="card">
-          <div class="card__img card__img4 card--img-grow" ></div>
+          <a href="" class="card__img card__img4 card--img-grow"></a>
           <h3 class="card__title">Project Four</h3>
           <a href="" class="card__link">View Project&nbsp;
             <i class="fas fa-arrow-right card__arrow"></i>
@@ -119,7 +124,7 @@
         </div>
 
         <div class="card">
-          <div class="card__img card__img5 card--img-grow"></div>
+          <a href="" class="card__img card__img5 card--img-grow"></a>
           <h3 class="card__title">Project Five</h3>
           <a href="" class="card__link">View Project&nbsp;
             <i class="fas fa-arrow-right card__arrow"></i>
@@ -127,7 +132,7 @@
         </div>
 
         <div class="card">
-          <div class="card__img card__img6 card--img-grow"></div>
+          <a href="" class="card__img card__img6 card--img-grow"></a>
           <h3 class="card__title">Project Six</h3>
           <a href="" class="card__link">View Project&nbsp;
             <i class="fas fa-arrow-right card__arrow"></i>
@@ -141,7 +146,7 @@
 <!-- Project Cards End -->
 <!-- Footer Begin -->
 
-<footer>
+<footer class="footer-wrapper">
   <div class="footer">
     <div class="footer__text-div">
       <h2 class="footer__header footer--header"> Get in Touch</h2>
@@ -176,14 +181,22 @@
         <input type="text" value="Subject*" class="footer__form-field footer__form-field4">
       </div>
       <div class="footer__field-container footer__field-container-big">
-        <textarea placeholder="Message" row="40" col="40" class="footer__form-field footer__form-field5">
-        </textarea>
+        <textarea placeholder="Message" row="40" col="40" class="footer__form-field footer__form-field5"></textarea>
       </div>
       <div class="footer__btn-div">
         <input type="button" value="Submit" class="btn"></input>
       </div>
     </div>
+    <div class="bottom">
+        <div class="bottom__foot-arrow-text">
+          <a href="#hero">
+            <i class="bottom--foot-arrow fas fa-arrow-up"></i>
+          </a>
+          <a href="#hero" class="hero--foot-text ">Scroll Up</a>
+        </div>
+    </div>
   </div>
+
 </footer>
 
 <!-- Footer End -->

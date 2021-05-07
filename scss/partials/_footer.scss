@@ -1,11 +1,18 @@
 @use "../abstracts" as *;
 
+.footer-wrapper {
+  width: auto;
+  height: 100%;
+  background-color: $footer-bg-col;
+
+}
+
 .footer{
   width:100%;
   height: auto;
   display: flex;
   flex-wrap: wrap;
-  padding: 20px 0;
+  padding: 20px 0 0 0;
   background-color: $footer-bg-col;
   font-family: 'DM Sans', sans-serif;
   color: $sb-font-col;
@@ -46,6 +53,7 @@
   &__field-container {
     flex-basis: 100%;
     padding:5px 10px;
+
   }
 
   &__field-container-duel {
@@ -67,6 +75,7 @@
     outline: none;
     border-style: none;
     border-radius: 3px;
+    box-shadow: inset 0 0 5px black;
   }
 
   &__form-field1 {
@@ -95,7 +104,11 @@
   &--number {
     color: $crd-highlight;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 17px;
+    &:hover {
+      text-decoration: underline;
+      text-decoration-color: $crd-highlight;
+    }
   }
 
 }
@@ -124,4 +137,30 @@ input[type=button]:hover {
 .btn {
   height: 100%;
   width: 120px;
+}
+
+.bottom {
+  margin: 0 0 10px 0;
+  width: 100%;
+  height: auto;
+  background-color: $footer-bg-col;
+
+  &__foot-arrow-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  &--foot-text,
+  &--foot-arrow {
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    font-style: normal;
+    color: $sb-font-col;
+    font-family: 'DM Sans';
+  }
 }

@@ -57,6 +57,7 @@
     letter-spacing: 1.2;
     &:hover {
       text-decoration: underline;
+      text-decoration-color: $crd-highlight;
     }
   }
 
@@ -67,15 +68,20 @@
     align-items: center;
     height: 40px;
     border-bottom: 2px solid $border-col;
+
   }
 
   &--contact {
-    color: $sb-font-col;;
+    color: $sb-font-col;
     font-family: 'DM Sans', sans-serif;
+    &:hover {
+      text-decoration: underline;
+      text-decoration-color: $crd-highlight;
+    }
   }
 
   &__social-wrapper {
-    height:80px;
+    height: 60px;
     width: 100px;
     flex-basis: 100%;
     display: flex;
@@ -86,10 +92,146 @@
   &__social-div {
     flex-basis:80%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
   }
 
   &--icons {
-    color: $border-col;
+    color: $sb-font-col;
+    font-size: 25px;
+    &:hover {
+      color: $crd-highlight;
+    }
+  }
+}
+
+// main and footer in general selectors partial must have margin left the
+// same value as .sidebar-wrapper width
+
+.sidebar-wrapper {
+  @media (min-width:$mobile) {
+    width: 130px;
+  }
+  @media (min-width:$tablet) {
+    width: 140px;
+  }
+  @media (min-width:$medium) {
+    width: 150px;
+    border-right: 3px solid $border-col;
+  }
+  @media (min-width:$large) {
+    width: 160px;
+  }
+}
+
+
+
+.sidebar {
+
+ //letter block matches the width of sidebar (minus the border) to remain square
+  &__letter-block {
+    @media (min-width:$mobile) {
+      height: 128px;
+    }
+    @media (min-width:$tablet) {
+      height: 138px;
+    }
+    @media (min-width:$medium) {
+      height: 147px;
+      border-bottom: 3px solid $border-col;
+    }
+    @media (min-width:$large) {
+      height: 158px;
+    }
+  }
+
+  &--letter {
+    @media (min-width:$mobile) {
+      font-size: 55px;
+    }
+    @media (min-width:$tablet) {
+      font-size: 60px;
+    }
+    @media (min-width:$medium) {
+      font-size: 65px;
+    }
+    @media (min-width:$large) {
+      font-size: 70px;
+    }
+  }
+
+  &__nav-block {
+    @media (min-width:$mobile) {
+      height: 165px;
+    }
+    @media (min-width:$tablet) {
+      height: 175px;
+    }
+    @media (min-width:$medium) {
+      height: 195px;
+      border-bottom: 3px solid $border-col;
+    }
+    @media (min-width:$large) {
+      height: 205px;
+    }
+
+  }
+
+  // Font size changes to adapt to the size of sidebar
+  &__list-item {
+    @media (min-width:$mobile) {
+      font-size: 13px;
+    }
+    @media (min-width:$tablet) {
+      font-size: 15px;
+    }
+    @media (min-width:$medium) {
+      font-size: 16px;
+    }
+    @media (min-width:$large) {
+      font-size: 17px;
+    }
+  }
+
+  &__contact {
+    @media (min-width:$mobile) {
+      height: 45px;
+    }
+    @media (min-width:$tablet) {
+      height: 50px;
+    }
+    @media (min-width:$medium) {
+      height: 55px;
+      border-bottom: 3px solid $border-col;
+    }
+    @media (min-width:$large) {
+      height: 60px;
+    }
+  }
+
+  &--contact {
+    @media (min-width:$mobile) {
+      font-size: 17px;
+    }
+    @media (min-width:$tablet) {
+      font-size: 20px;
+    }
+    @media (min-width:$medium) {
+      font-size: 22px;
+    }
+  }
+
+  &--icons {
+    @media (min-width:$mobile) {
+      font-size: 27px;
+    }
+    @media (min-width:$tablet) {
+      font-size: 30px;
+    }
+    @media (min-width:$medium) {
+      font-size: 35px;
+    }
+    @media (min-width:$large) {
+      font-size: 40px;
+    }
   }
 }

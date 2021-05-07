@@ -1,3 +1,5 @@
+@use "../abstracts" as *;
+
 * {
   box-sizing: border-box;
 }
@@ -5,8 +7,32 @@
 main {
   // Margin left must be the same width as the sidebar
   margin-left: 120px;
+  @media (min-width:$mobile) {
+    margin-left: 130px;
+  }
+  @media (min-width:$tablet) {
+    margin-left: 140px;
+  }
+  @media (min-width:$medium) {
+    margin-left: 150px;
+  }
+  @media (min-width:$large) {
+    margin-left: 160px;
+  }
 }
 
 footer {
   margin-left: 120px;
+  @media (min-width:$mobile) {
+    margin-left: 130px;
+  }
+  @media (min-width:$tablet) {
+    margin-left: 140px;
+  }
+  @media (min-width:$medium) {
+    margin-left: 150px;
+  }
+  @media (min-width:$large) {
+    margin-left: 160px;
+  }
 }

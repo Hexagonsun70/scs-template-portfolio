@@ -9,3 +9,14 @@ $medium: 992px;
 //992-1260px: medium
 $large: 1260px;
 //1260px> : large
+
+// These are just left here to make it easier to copy and paste across partials
+
+@media (min-width:$mobile) {
+}
+@media (min-width:$tablet) {
+}
+@media (min-width:$medium) {
+}
+@media (min-width:$large) {
+}
