@@ -19,28 +19,28 @@
     <div class="sidebar">
 
       <div class="sidebar__letter-block">
-        <div class="sidebar--letter">AM</div>
+        <a href="index.html"><div class="sidebar--letter">AM</div></a>
       </div>
 
       <nav class="sidebar__nav-block">
         <ul class="sidebar__nav-list">
           <li>
-            <a href="#" class="sidebar__list-item">My Portfolio</a>
+            <a href="#cards" class="sidebar__list-item">My Portfolio</a>
           </li>
           <li>
-            <a href="#" class="sidebar__list-item" >Coding Examples</a>
+            <a href="html/coding_examples.html" class="sidebar__list-item" >Coding Examples</a>
           </li>
           <li>
-            <a href="#" class="sidebar__list-item">SCS Scheme</a>
+            <a href="html/scs_scheme.html" class="sidebar__list-item">SCS Scheme</a>
           </li>
           <li>
-            <a href="#"  class="sidebar__list-item">About Me</a>
+            <a href="html/about_me.html"  class="sidebar__list-item">About Me</a>
           </li>
         </ul>
       </nav>
 
       <div class="sidebar__contact">
-        <a href="#" class="sidebar--contact">Contact Me</a>
+        <a href="#contact" class="sidebar--contact">Contact Me</a>
       </div>
 
       <div class="sidebar__social-wrapper">
@@ -50,6 +50,8 @@
               <i class="sidebar--icons fab fa-github"></i>
             </a>
           </div>
+          <!-- social media Icons that aren't being used -->
+
           <!-- <div><a href="#"><i class="sidebar--icons fab fa-facebook-f"></i></a></div>
           <div><a href="#"><i class="sidebar--icons fab fa-instagram"></i></a></div>
           <div><a href="#"><i class="sidebar--icons fab fa-twitter"></i></a></div>
@@ -113,7 +115,7 @@
           </a>
         </div>
 
-        <div class="card__flex-break"></div>
+        <!-- <div class="card__flex-break"></div> -->
 
         <div class="card">
           <a href="" class="card__img card__img4 card--img-grow"></a>
@@ -146,54 +148,56 @@
 <!-- Project Cards End -->
 <!-- Footer Begin -->
 
-<footer class="footer-wrapper">
-  <div class="footer">
-    <div class="footer__text-div">
-      <h2 class="footer__header footer--header"> Get in Touch</h2>
-      <p class="footer__p footer--p">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus
-        commodi tempora voluptas sunt maiores!
-      </p>
-      <div class="footer__email-number">
-        <a href="" class="footer__number footer--number">
-          07776 795 786
-        </a>
-        <a href="" class="footer__email footer--email">
-          alex.mckendrick@gmail.com
-        </a>
-      </div>
-      <p class="footer__p footer--p">
-         Lorem ipsum dolor sit amet, consectetur adipisicing
-         elit. Ratione ullam, earum quod maxime molestias deleniti adipisci!
-         Fugit laboriosam temporibus accusantium, incidunt dignissimos odio.
-         Suscipit, repellendus.
-      </p>
-    </div>
-    <div class="footer__form">
-      <div class="footer__field-container-duel">
-        <input type="text" value="First Name*" class="footer__form-field footer__form-field1">
-        <input type="text" value="Last Name*" class="footer__form-field footer__form-field2">
-      </div>
-      <div class="footer__field-container">
-        <input type="email" value="Email*" class="footer__form-field footer__form-field3">
-      </div>
-      <div class="footer__field-container">
-        <input type="text" value="Subject*" class="footer__form-field footer__form-field4">
-      </div>
-      <div class="footer__field-container footer__field-container-big">
-        <textarea placeholder="Message" row="40" col="40" class="footer__form-field footer__form-field5"></textarea>
-      </div>
-      <div class="footer__btn-div">
-        <input type="button" value="Submit" class="btn"></input>
-      </div>
-    </div>
-    <div class="bottom">
-        <div class="bottom__foot-arrow-text">
-          <a href="#hero">
-            <i class="bottom--foot-arrow fas fa-arrow-up"></i>
+<footer class="footer-aligner" id="contact">
+  <div class="footer-wrapper">
+    <div class="footer">
+      <div class="footer__text-div">
+        <h2 class="footer__header footer--header"> Get in Touch</h2>
+        <p class="footer__p footer--p">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus
+          commodi tempora voluptas sunt maiores!
+        </p>
+        <div class="footer__email-number">
+          <a href="" class="footer__number footer--number">
+            07776 795 786
           </a>
-          <a href="#hero" class="hero--foot-text ">Scroll Up</a>
+          <a href="" class="footer__email footer--email">
+            alex.mckendrick@gmail.com
+          </a>
         </div>
+        <p class="footer__p footer--p">
+           Lorem ipsum dolor sit amet, consectetur adipisicing
+           elit. Ratione ullam, earum quod maxime molestias deleniti adipisci!
+           Fugit laboriosam temporibus accusantium, incidunt dignissimos odio.
+           Suscipit, repellendus.
+        </p>
+      </div>
+      <div class="footer__form">
+        <div class="footer__field-container-duel">
+          <input type="text" value="First Name*" class="footer__form-field footer__form-field1">
+          <input type="text" value="Last Name*" class="footer__form-field footer__form-field2">
+        </div>
+        <div class="footer__field-container">
+          <input type="email" value="Email*" class="footer__form-field footer__form-field3">
+        </div>
+        <div class="footer__field-container">
+          <input type="text" value="Subject*" class="footer__form-field footer__form-field4">
+        </div>
+        <div class="footer__field-container footer__field-container-big">
+          <textarea placeholder="Message" row="40" col="40" class="footer__form-field footer__form-field5"></textarea>
+        </div>
+        <div class="footer__btn-div">
+          <input type="button" value="Submit" class="btn"></input>
+        </div>
+      </div>
+      <div class="bottom">
+          <div class="bottom__foot-arrow-text">
+            <a href="#hero">
+              <i class="bottom--foot-arrow fas fa-arrow-up"></i>
+            </a>
+            <a href="#hero" class="hero--foot-text ">Scroll Up</a>
+          </div>
+      </div>
     </div>
   </div>
 

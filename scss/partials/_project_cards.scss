@@ -98,8 +98,11 @@
   @media (min-width:$tablet) {
   }
   @media (min-width:$medium) {
+
   }
   @media (min-width:$large) {
+    max-width: 276.6px;
+    width: 100%;
   }
 
 }
@@ -111,9 +114,11 @@
     width: 760px;
   }
   @media (min-width:$medium) {
-    width: 1170px;
+
   }
   @media (min-width:$large) {
+    width: 900px;
+    justify-content: space-between;
   }
 
 }

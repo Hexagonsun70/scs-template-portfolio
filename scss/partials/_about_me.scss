@@ -1,0 +1,30 @@
+@use "../abstracts" as *;
+
+.about {
+  background-color: $bg-col;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  color: $sb-font-col;
+  font-family: 'DM Sans', sans-serif;
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: $sb-bg-col;
+    color: $crd-highlight;
+    margin: 25px 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 12px black;
+    padding: 15px;
+  }
+
+  &__title {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 2rem;
+  }
+}

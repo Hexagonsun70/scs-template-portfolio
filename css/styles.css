@@ -521,20 +521,49 @@ footer {
   font-size: 15px;
 }
 
+@media (min-width: 1260px) {
+  .card {
+    max-width: 276.6px;
+    width: 100%;
+  }
+}
+
 @media (min-width: 768px) {
   .card-wrapper {
     width: 760px;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1260px) {
   .card-wrapper {
-    width: 1170px;
+    width: 900px;
+    justify-content: space-between;
   }
 }
+
+.footer-aligner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #171E26;
+}
+
 .footer-wrapper {
   width: auto;
+  max-width: 385px;
   height: 100%;
   background-color: #171E26;
+}
+@media (min-width: 768px) {
+  .footer-wrapper {
+    max-width: 760px;
+    width: 760px;
+  }
+}
+@media (min-width: 1260px) {
+  .footer-wrapper {
+    max-width: 900px;
+    width: 900px;
+  }
 }
 
 .footer {
@@ -668,4 +697,91 @@ input[type=button]:hover {
   font-style: normal;
   color: #e5aa8c;
   font-family: "DM Sans";
+}
+
+.wrap {
+  background-color: #1C3636;
+  height: 100vh;
+}
+
+.scs {
+  background-color: #1C3636;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  color: #e5aa8c;
+  font-family: "DM Sans", sans-serif;
+}
+.scs__wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  .scs__wrapper {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+.scs__title {
+  align-self: center;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  flex-basis: 100%;
+}
+.scs__block {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: #171E26;
+  color: #748E54;
+  margin: 10px 0 10px 0;
+  border-radius: 5px;
+  max-width: 280px;
+  box-shadow: 0 0 12px black;
+  letter-spacing: 1.2px;
+}
+@media (min-width: 768px) {
+  .scs__block {
+    margin: 10px;
+  }
+}
+.scs__block-title {
+  margin-bottom: 15px;
+  font-weight: 600;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.scs__block-p {
+  margin-bottom: 15px;
+}
+
+.about {
+  background-color: #1C3636;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  color: #e5aa8c;
+  font-family: "DM Sans", sans-serif;
+}
+.about__block {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: #171E26;
+  color: #748E54;
+  margin: 25px 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 12px black;
+  padding: 15px;
+}
+.about__title {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 2rem;
 }

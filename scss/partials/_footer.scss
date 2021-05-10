@@ -1,9 +1,32 @@
 @use "../abstracts" as *;
 
+.footer-aligner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $footer-bg-col;
+}
+
 .footer-wrapper {
   width: auto;
+  max-width:385px;
   height: 100%;
   background-color: $footer-bg-col;
+
+
+  @media (min-width:$mobile) {
+  }
+  @media (min-width:$tablet) {
+    max-width:760px;
+    width: 760px;
+  }
+  @media (min-width:$medium) {
+
+  }
+  @media (min-width:$large) {
+    max-width:900px;
+    width: 900px;
+  }
 
 }
 
@@ -22,8 +45,11 @@
   &__form {
     flex-basis: 100%;
     // change to 50% for higher breakpoint
-    @media (min-width: $tablet) {
+    @media (min-width:$tablet) {
       flex-basis: 50%;
+    }
+    @media (min-width: $large) {
+
     }
   }
 
