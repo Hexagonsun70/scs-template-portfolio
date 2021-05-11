@@ -1,0 +1,40 @@
+@use "../abstracts" as *;
+
+// Quick fix for the footer in IE. probably can be done more elegantly
+// but it gets the job done.
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active){
+  .footer {
+    display: block;
+
+    @media (min-width: $tablet) {
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    &__text-div, &__form {
+      flex-basis: 45%;
+    }
+}
+}
+
+// I re-arranged some of my html to get flex working for IE and then needed to
+// add some padding to the title to make it look congruent with the other pages.
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active){
+  .scs {
+    &__title {
+      padding: 20px;
+    }
+}
+}
+
+// For some reason the main .wrap class wasn't stretching to 100vh so I used
+// a new class on body instead.
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active){
+  .ie-bg {
+    background-color: $bg-col;
+    height: 100vh;
+  }
+}

@@ -1,5 +1,9 @@
 @use "../abstracts" as *;
-
+.wrap {
+  width: auto;
+  height: 100vh;
+  background-color: $bg-col;
+}
 .about {
   background-color: $bg-col;
   display: flex;
@@ -20,6 +24,9 @@
     border-radius: 5px;
     box-shadow: 0 0 12px black;
     padding: 15px;
+    width: 90%;
+    max-width: 575px;
+    align-self: center;
   }
 
   &__title {

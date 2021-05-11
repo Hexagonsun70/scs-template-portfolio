@@ -158,10 +158,11 @@
           commodi tempora voluptas sunt maiores!
         </p>
         <div class="footer__email-number">
-          <a href="" class="footer__number footer--number">
+          <a href="tel:077-767-95786" class="footer__number footer--number">
             07776 795 786
           </a>
-          <a href="" class="footer__email footer--email">
+          <a href="mailto:alex.mckendrick@gmail.com"
+          class="footer__email footer--email">
             alex.mckendrick@gmail.com
           </a>
         </div>
@@ -174,17 +175,24 @@
       </div>
       <div class="footer__form">
         <div class="footer__field-container-duel">
-          <input type="text" value="First Name*" class="footer__form-field footer__form-field1">
-          <input type="text" value="Last Name*" class="footer__form-field footer__form-field2">
+          <input type="text" value="First Name*" onfocus="this.value=''"
+           class="footer__form-field footer__form-field1">
+          <input type="text" value="Last Name*" onfocus="this.value=''"
+           class="footer__form-field footer__form-field2">
         </div>
         <div class="footer__field-container">
-          <input type="email" value="Email*" class="footer__form-field footer__form-field3">
+          <input type="email" value="Email*" onfocus="this.value=''"
+           class="footer__form-field footer__form-field3">
         </div>
         <div class="footer__field-container">
-          <input type="text" value="Subject*" class="footer__form-field footer__form-field4">
+          <input type="text" value="Subject*" onfocus="this.value=''"
+           class="footer__form-field footer__form-field4">
         </div>
         <div class="footer__field-container footer__field-container-big">
-          <textarea placeholder="Message" row="40" col="40" class="footer__form-field footer__form-field5"></textarea>
+          <textarea
+            placeholder="Message" row="40" col="40" onfocus="this.value=''"
+            class="footer__form-field footer__form-field5">
+          </textarea>
         </div>
         <div class="footer__btn-div">
           <input type="button" value="Submit" class="btn"></input>

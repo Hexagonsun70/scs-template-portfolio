@@ -44,7 +44,7 @@
   &__text-div,
   &__form {
     flex-basis: 100%;
-    // change to 50% for higher breakpoint
+
     @media (min-width:$tablet) {
       flex-basis: 50%;
     }
@@ -97,11 +97,12 @@
     width: 100%;
     height: 100%;
     background-color: $bg-col;
-    color: #152828;
+    color: black;
     outline: none;
     border-style: none;
     border-radius: 3px;
     box-shadow: inset 0 0 5px black;
+    padding-left: 15px;
   }
 
   &__form-field1 {
@@ -137,7 +138,12 @@
     }
   }
 
+  &--email {
+    font-size: 14px;
+  }
+
 }
+
 
 input[type=button] {
   background-color: $footer-bg-col;
@@ -157,8 +163,13 @@ input[type=button]:hover {
 }
 
 ::placeholder {
-  color: #152828;
+  color: black;
 }
+
+textarea{
+  overflow: auto;
+}
+
 
 .btn {
   height: 100%;
