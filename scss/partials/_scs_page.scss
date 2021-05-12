@@ -44,12 +44,12 @@
     margin: 10px 0 10px 0;
     border-radius: 5px;
     width: 100%;
-    max-width: 280px;
     box-shadow: 0 0 12px black;
     letter-spacing: 1.2px;
 
     @media (min-width: $tablet) {
       margin: 10px;
+      max-width: 280px;
     }
 
   }
@@ -59,9 +59,19 @@
     font-weight: 600;
     text-align: center;
     font-size: 1.5rem;
+
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     // color: $sb-font-col;
   }
   &__block-p {
       margin-bottom: 15px;
+
   }
+
+    &__block-p-group {
+        line-height: 1.6;
+    }
 }
