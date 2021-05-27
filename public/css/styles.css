@@ -137,8 +137,7 @@ body {
 }
 .sidebar__list-item:hover {
   text-decoration: underline;
-  -webkit-text-decoration-color: #748E54;
-          text-decoration-color: #748E54;
+  text-decoration-color: #748E54;
 }
 .sidebar__contact {
   flex-basis: 100%;
@@ -154,8 +153,7 @@ body {
 }
 .sidebar--contact:hover {
   text-decoration: underline;
-  -webkit-text-decoration-color: #748E54;
-          text-decoration-color: #748E54;
+  text-decoration-color: #748E54;
 }
 .sidebar__social-wrapper {
   height: 60px;
@@ -631,8 +629,7 @@ body {
 }
 .footer--email:hover, .footer--number:hover {
   text-decoration: underline;
-  -webkit-text-decoration-color: #748E54;
-          text-decoration-color: #748E54;
+  text-decoration-color: #748E54;
 }
 .footer--email {
   font-size: 14px;
@@ -889,3 +886,5 @@ textarea {
     font-size: 60px;
   }
 }
+
+/*# sourceMappingURL=styles.css.map */
