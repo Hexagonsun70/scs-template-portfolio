@@ -1,6 +1,8 @@
+/* finished the video at timing the animations */
+
 :root {
   --clr-neutral-900: hsl(207, 19%, 9%);
-  --clr-neutral-100: #e5aa8c;
+  --clr-neutral-100: #DD9069;
   --clr-accent-400: #748E54;
 }
 
@@ -31,9 +33,9 @@ body {
   transition: transform 500ms ease;
 }
 
-.card:hover {
+.card:hover,
+.card:focus-within {
   transform: scale(1.05);
-  background-image: url(img/nm-img.png), brightness(70%);
 }
 
 .card--content {
@@ -45,25 +47,41 @@ body {
   --padding: 1.5rem;
   padding: var(--padding);
   background: linear-gradient(
-    hsl(0 0% 0% / 0),
-    hsl(20 0% 0% / 0.3) 15%,
-    hsl(0 0% 0% / 1)
+    hsl(212 25% 12% / 0.0),
+    hsl(212 25% 12% / 0.2) 5%,
+    hsl(212 25% 12% / 0.4) 10%,
+    hsl(212 25% 12% / 0.8) 15%,
+    hsl(212 25% 12% / 1)
   );
-  transform: translateY(65%);
-
-  transition: transform 650ms ease;
 }
 
-.card--content > *:not(.card--title) {
-  opacity: 0;
-}
+@media (hover) {
+  .card--content {
+    transform: translateY(65%);
+    transition: transform 500ms ease;
+  }
+  .card:hover .card--content,
+  .card:focus-within .card--content {
+    transform: translateY(0);
+    transition-delay: 500ms;
+  }
 
-.card:hover .card--content {
-  transform: translateY(0);
-}
+  .card:focus-within .card-content {
+    transition-duration: 0ms;
+  }
 
-.card:hover .card--content > *:not(.card--title) {
-  opacity: 1;
+  .card--content > *:not(.card--title) {
+    opacity: 0;
+  }
+
+  .card:hover .card--content > *:not(.card--title),
+  .card:focus-within .card--content > *:not(.card--title) {
+    opacity: 1;
+  }
+
+  .card--title::after {
+    transform: scaleX(0);
+  }
 }
 
 .card--title {
@@ -84,13 +102,13 @@ body {
   bottom: 0;
   width: calc(100% + var(--padding));
   background: var(--clr-accent-400);
-  transform: ScaleX(0);
   transform-origin: left;
 
   transition: transform 500ms ease;
 }
 
-.card:hover .card--title::after {
+.card:hover .card--title::after,
+.card:focus-within .card--title::after {
   /*
   this selector selects the pseudo element on hover. the declaration gives
   the horizontal line a point to animate and transition to.
@@ -98,8 +116,10 @@ body {
   transform: scaleX(1);
 }
 
-.card-body {
-  color: rgb(255 255 255 / 0.90);
+.card--body {
+  color: var(--clr-neutral-100);
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 .card--buttons {
@@ -111,14 +131,34 @@ body {
 .button {
   cursor: pointer;
   display: inline-block;
-  text-decoration: none;
-  color: var(--clr-neutral-900);
-  background-color: var(--clr-accent-400);
   padding: 0.5em 1.25em;
   border-radius: 0.25rem;
+  border: 3px solid var(--clr-accent-400);
+  background-color: var(--clr-neutral-900 / 0.5);
+  color: var(--clr-accent-400);
+  text-decoration: none;
+  font-weight: 600;
 }
 
 .button:hover,
 .button:focus {
-  background-color: var(--clr-neutral-100);
+  background-color: var(--clr-accent-400);
+  color: var(--clr-neutral-900);
+}
+
+/*
+  This is a media query to account for people who wish to have no
+ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms
+    !important;
+    animation-iteration-count: 1
+    !important;
+    scroll-behavior: auto !important;
+    transition-delay: 0ms !important;
+  }
 }
