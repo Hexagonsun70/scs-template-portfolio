@@ -7,8 +7,8 @@
 
 body {
   // Margin left must be the same width as the sidebar
-  margin-left: 120px;
-  @media (min-width:$mobile) {
+  margin-left: 0;
+  @media (min-width:500px) {
     margin-left: 130px;
   }
   @media (min-width:$tablet) {

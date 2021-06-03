@@ -59,9 +59,9 @@ table {
 }
 
 body {
-  margin-left: 120px;
+  margin-left: 0;
 }
-@media (min-width: 425px) {
+@media (min-width: 500px) {
   body {
     margin-left: 130px;
   }
@@ -83,6 +83,7 @@ body {
 }
 
 .sidebar-wrapper {
+  display: none;
   height: 100vh;
   width: 120px;
   position: fixed;
@@ -92,6 +93,11 @@ body {
   overflow-x: hidden;
   background-color: #171E26;
   border-right: 2px solid #e5aa8c;
+}
+@media (min-width: 500px) {
+  .sidebar-wrapper {
+    display: block;
+  }
 }
 
 .sidebar {
@@ -173,6 +179,7 @@ body {
 .sidebar--icons {
   color: #e5aa8c;
   font-size: 25px;
+  margin-top: 40px;
 }
 .sidebar--icons:hover {
   color: #748E54;
@@ -427,6 +434,16 @@ body {
     font-size: 25px;
   }
 }
+:root {
+  --clr-neutral-900: hsl(207, 19%, 9%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 .card-aligner {
   height: 100%;
   width: 100%;
@@ -447,99 +464,205 @@ body {
   overflow: visible;
 }
 
+@media (min-width: 1300px) {
+  .card-wrapper {
+    width: 1100px;
+  }
+}
+
 .card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  max-width: 350px;
-  height: 380px;
-  background-color: #171E26;
-  border-radius: 5px 5px 0 0;
-  margin: 10px;
-  box-shadow: 0 0 12px black;
-}
-.card:hover .card__p {
-  display: block;
-}
-.card__img {
-  height: 240px;
-  width: 100%;
-  border-radius: 5px;
-  background-image: url(../img/ioccc_donut_small.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
+  color: #DD9069;
+  background-image: url(../../img/ioccc_donut.jpg);
   background-size: cover;
+  padding: 50px 0 0;
+  height: 400px;
+  margin: 15px;
+  max-width: 30ch;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 18px black;
+  overflow: hidden;
+  transition: transform 500ms ease;
 }
-.card__img1 {
-  background-image: url(../img/netmatters-image.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+
+.card-1 {
+  background-image: url(../../img/nm-img.png);
 }
-.card--img-grow {
-  transition: all 0.25s ease-in-out;
-}
-.card--img-grow:hover {
+
+.card:hover,
+.card:focus-within {
   transform: scale(1.05);
-  opacity: 0.7;
-  position: relative;
 }
-.card__img, .card__link {
-  margin-bottom: 10px;
-}
-.card__title, .card__link {
+
+.card--content {
+  /*
+  padding variable measurement is locally scoped (can only be used in card
+  content). It's used with calc to calculate the pseudo elements length to
+  fit the content of the
+  */
+  --padding: 1.5rem;
+  padding: var(--padding);
+  height: auto;
   width: 100%;
-  text-align: left;
-  color: #e5aa8c;
-  font-family: "DM Sans", sans-serif;
+  background: linear-gradient(rgba(23, 30, 38, 0), rgba(23, 30, 38, 0.2) 5%, rgba(23, 30, 38, 0.4) 10%, rgba(23, 30, 38, 0.8) 15%, #171e26);
 }
-.card__p {
-  margin: 5px 15px 10px 15px;
-  color: #748E54;
-  font-family: "DM Sans", sans-serif;
-  letter-spacing: 1.1px;
-  line-height: 20px;
-  display: none;
+
+.card--content-1 {
+  transform: translateY(150px);
 }
-.card__title {
-  margin: 0 0 5px 15px;
-  font-weight: 500;
+
+.card--content-2,
+.card--content-3,
+.card--content-4,
+.card--content-5,
+.card--content-6 {
+  transform: translateY(100px);
+}
+
+.card--title {
+  /*
+  max content is used so the pseudo element is the same size as the content,
+  if the text wraps over one line this will break. max-width: 100%; should work
+  as a substitute in that case.
+  */
+  width: max-content;
+  position: relative;
+  padding-bottom: 10px;
+  font-weight: 600;
   font-size: 20px;
 }
-.card__link {
-  color: #748E54;
-  margin-left: 30px;
-  height: 20px;
+
+.card--title::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  left: calc(var(--padding) * -1);
+  bottom: 0;
+  width: calc(100% + var(--padding));
+  background: #748E54;
+  transform-origin: left;
+  transition: transform 500ms ease;
+}
+
+.card:hover .card--title::after,
+.card:focus-within .card--title::after {
+  /*
+  this selector selects the pseudo element on hover. the declaration gives
+  the horizontal line a point to animate and transition to.
+  */
+  transform: scaleX(1);
+}
+
+.card--body {
+  color: #DD9069;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin: 20px 0 20px 0;
+}
+
+.body-button-wrapper {
+  height: 100%;
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
+}
+
+.card--buttons {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
-.card__link-text:hover {
-  text-decoration: underline;
-}
-.card__arrow {
-  font-size: 15px;
+
+.button {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.5em;
+  border-radius: 0.25rem;
+  border: 3px solid #748E54;
+  background-color: var(--clr-neutral-900/0.5);
+  color: #748E54;
+  text-decoration: none;
+  font-weight: 600;
 }
 
-@media (min-width: 1260px) {
-  .card {
-    max-width: 276.6px;
-    width: 100%;
-  }
+.button:hover,
+.button:focus {
+  background-color: #748E54;
+  color: #232d3a;
 }
 
-@media (min-width: 768px) {
-  .card-wrapper {
-    width: 760px;
+@media (hover) {
+  .card--content {
+    transform: translateY(280px);
+    transition: transform 500ms ease;
   }
-}
-@media (min-width: 1260px) {
-  .card-wrapper {
-    width: 900px;
-    justify-content: space-between;
-  }
-}
 
+  .card:hover .card--content-1,
+.card:focus-within .card--content-1 {
+    transform: translateY(75%);
+    transition-delay: 500ms;
+  }
+
+  .card:hover .card--content-2,
+.card:focus-within .card--content-2 {
+    transform: translateY(40%);
+    transition-delay: 500ms;
+  }
+
+  .card:hover .card--content-3,
+.card:focus-within .card--content-3 {
+    transform: translateY(40%);
+    transition-delay: 500ms;
+  }
+
+  .card:hover .card--content-4,
+.card:focus-within .card--content-4 {
+    transform: translateY(40%);
+    transition-delay: 500ms;
+  }
+
+  .card:hover .card--content-5,
+.card:focus-within .card--content-5 {
+    transform: translateY(40%);
+    transition-delay: 500ms;
+  }
+
+  .card:hover .card--content-6,
+.card:focus-within .card--content-6 {
+    transform: translateY(40%);
+    transition-delay: 500ms;
+  }
+
+  .card:focus-within .card-content {
+    transition-duration: 0ms;
+  }
+
+  .card--content > *:not(.card--title) {
+    opacity: 0;
+  }
+
+  .card:hover .card--content > *:not(.card--title),
+.card:focus-within .card--content > *:not(.card--title) {
+    opacity: 1;
+  }
+
+  .card--title::after {
+    transform: scaleX(0);
+  }
+}
+/*
+  This is a media query to account for people who wish to have no
+ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-delay: 0ms !important;
+  }
+}
 .footer-aligner {
   display: flex;
   justify-content: center;
@@ -559,10 +682,12 @@ body {
     width: 760px;
   }
 }
-@media (min-width: 1260px) {
+@media (min-width: 1300px) {
   .footer-wrapper {
-    max-width: 900px;
-    width: 900px;
+    max-width: 1100px;
+    width: 1100px;
+    display: flex;
+    justify-content: space-between;
   }
 }
 
@@ -574,7 +699,7 @@ body {
   padding: 20px 0 0 0;
   background-color: #171E26;
   font-family: "DM Sans", sans-serif;
-  color: #e5aa8c;
+  color: #DD9069;
 }
 .footer__text-div, .footer__form {
   flex-basis: 100%;
@@ -589,6 +714,11 @@ body {
 }
 .footer__header, .footer__email, .footer__number, .footer__p {
   margin-bottom: 20px;
+}
+@media (min-width: 1260px) {
+  .footer__p {
+    width: 40ch;
+  }
 }
 .footer__email-number {
   display: flex;
@@ -617,7 +747,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: #1C3636;
-  color: #D98659;
+  color: #DD9069;
   outline: none;
   border-style: none;
   border-radius: 3px;
@@ -652,7 +782,7 @@ body {
           text-decoration-color: #748E54;
 }
 .footer--email {
-  font-size: 14px;
+  font-size: 17px;
 }
 
 input[type=button] {
@@ -705,7 +835,7 @@ textarea {
   font-weight: 600;
   text-decoration: none;
   font-style: normal;
-  color: #e5aa8c;
+  color: #DD9069;
   font-family: "DM Sans";
 }
 

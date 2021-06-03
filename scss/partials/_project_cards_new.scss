@@ -1,0 +1,256 @@
+@use "../abstracts" as *;
+
+:root {
+  --clr-neutral-900: hsl(207, 19%, 9%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.card-aligner {
+  height: 100%;
+  width: 100%;
+  background-color: $bg-col;
+  padding: 20px 0;
+  box-shadow: inset 0 0 12px black;
+  display: flex;
+  justify-content: center;
+}
+.card-wrapper {
+  display: flex;
+  flex-wrap:  wrap;
+  justify-content: center;
+  background-color: $bg-col;
+  padding: 5px;
+  margin: 10px;
+  overflow: visible;
+}
+
+.card-wrapper {
+  @media (min-width: 1300px) {
+    width: 1100px;
+  }
+}
+
+.card {
+  color: $body-font-col;
+  background-image: url(../../img/ioccc_donut.jpg);
+  background-size: cover;
+  padding: 50px 0 0;
+  height: 400px;
+  margin: 15px;
+  max-width: 30ch;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 18px black;
+  overflow:hidden;
+
+  transition: transform 500ms ease;
+}
+
+.card-1 {
+  background-image: url(../../img/nm-img.png);
+}
+
+.card:hover,
+.card:focus-within {
+  transform: scale(1.05);
+}
+
+.card--content {
+  /*
+  padding variable measurement is locally scoped (can only be used in card
+  content). It's used with calc to calculate the pseudo elements length to
+  fit the content of the
+  */
+  --padding: 1.5rem;
+  padding: var(--padding);
+  height: auto;
+  width: 100%;
+  background: linear-gradient(
+    hsl(212 25% 12% / 0.0),
+    hsl(212 25% 12% / 0.2) 5%,
+    hsl(212 25% 12% / 0.4) 10%,
+    hsl(212 25% 12% / 0.8) 15%,
+    hsl(212 25% 12% / 1)
+  );
+}
+
+// these card content declarations are to position the card content on hardware
+// that doesn't have hover.
+
+.card--content-1 {
+  transform: translateY(150px);
+}
+
+.card--content-2,
+.card--content-3,
+.card--content-4,
+.card--content-5,
+.card--content-6 {
+  transform: translateY(100px);
+}
+
+
+.card--title {
+  /*
+  max content is used so the pseudo element is the same size as the content,
+  if the text wraps over one line this will break. max-width: 100%; should work
+  as a substitute in that case.
+  */
+  width: max-content;
+  position: relative;
+  padding-bottom: 10px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.card--title::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  left: calc(var(--padding) * -1);
+  bottom: 0;
+  width: calc(100% + var(--padding));
+  background: $crd-highlight;
+  transform-origin: left;
+
+  transition: transform 500ms ease;
+}
+
+.card:hover .card--title::after,
+.card:focus-within .card--title::after {
+  /*
+  this selector selects the pseudo element on hover. the declaration gives
+  the horizontal line a point to animate and transition to.
+  */
+  transform: scaleX(1);
+}
+
+.card--body {
+  color: $body-font-col;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin: 20px 0 20px 0;
+}
+
+.body-button-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
+}
+
+.card--buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.5em;
+  border-radius: 0.25rem;
+  border: 3px solid $crd-highlight;
+  background-color: var(--clr-neutral-900 / 0.5);
+  color: $crd-highlight;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.button:hover,
+.button:focus {
+  background-color: $crd-highlight;
+  color: #232d3a;
+}
+
+@media (hover) {
+  .card--content {
+    transform: translateY(280px);
+    transition: transform 500ms ease;
+  }
+
+// having an animation translation length for each animation is not an elegant
+// solution, I could have got the individual heights of each element in card
+// content assigned them a variable and used calc() to calculate it, which
+// would of made it more DRY, but I resorted to this due to its simplicity
+// and wanting to sort out other problems sooner in case they cause
+// complications
+
+  .card:hover .card--content-1,
+  .card:focus-within .card--content-1 {
+    transform: translateY(75%);
+    transition-delay: 500ms;
+  }
+
+  .card:hover .card--content-2,
+  .card:focus-within .card--content-2 {
+    transform: translateY(40%);
+    transition-delay: 500ms;
+  }
+
+  .card:hover .card--content-3,
+  .card:focus-within .card--content-3 {
+    transform: translateY(40%);
+    transition-delay: 500ms;
+  }
+
+  .card:hover .card--content-4,
+  .card:focus-within .card--content-4 {
+    transform: translateY(40%);
+    transition-delay: 500ms;
+  }
+
+  .card:hover .card--content-5,
+  .card:focus-within .card--content-5 {
+    transform: translateY(40%);
+    transition-delay: 500ms;
+  }
+
+  .card:hover .card--content-6,
+  .card:focus-within .card--content-6   {
+    transform: translateY(40%);
+    transition-delay: 500ms;
+  }
+
+
+  .card:focus-within .card-content {
+    transition-duration: 0ms;
+  }
+
+  .card--content > *:not(.card--title) {
+    opacity: 0;
+  }
+
+  .card:hover .card--content > *:not(.card--title),
+  .card:focus-within .card--content > *:not(.card--title) {
+    opacity: 1;
+  }
+
+  .card--title::after {
+    transform: scaleX(0);
+  }
+}
+
+/*
+  This is a media query to account for people who wish to have no
+ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms
+    !important;
+    animation-iteration-count: 1
+    !important;
+    scroll-behavior: auto
+    !important;
+    transition-delay: 0ms
+    !important;
+  }
+}

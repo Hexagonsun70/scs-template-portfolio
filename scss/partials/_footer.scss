@@ -23,12 +23,15 @@
   @media (min-width:$medium) {
 
   }
-  @media (min-width:$large) {
-    max-width:900px;
-    width: 900px;
+  @media (min-width: 1300px) {
+    max-width: 1100px;
+    width: 1100px;
+    display: flex;
+    justify-content: space-between;
   }
 
 }
+
 
 .footer{
   width:100%;
@@ -38,7 +41,7 @@
   padding: 20px 0 0 0;
   background-color: $footer-bg-col;
   font-family: 'DM Sans', sans-serif;
-  color: $sb-font-col;
+  color: $body-font-col;
 
 
   &__text-div,
@@ -62,6 +65,12 @@
   &__number,
   &__p {
     margin-bottom: 20px;
+  }
+
+  &__p {
+    @media (min-width: $large) {
+    width: 40ch;
+    } 
   }
 
   &__email-number {
@@ -97,7 +106,7 @@
     width: 100%;
     height: 100%;
     background-color: $bg-col;
-    color: #D98659;
+    color: $body-font-col;
     outline: none;
     border-style: none;
     border-radius: 3px;
@@ -139,7 +148,7 @@
   }
 
   &--email {
-    font-size: 14px;
+    font-size: 17px;
   }
 
 }
@@ -199,7 +208,7 @@ textarea {
     font-weight: 600;
     text-decoration: none;
     font-style: normal;
-    color: $sb-font-col;
+    color: $body-font-col;
     font-family: 'DM Sans';
   }
 }
