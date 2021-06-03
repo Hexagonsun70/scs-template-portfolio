@@ -36,6 +36,7 @@
 }
 
 .card {
+  font-family: "DM Sans", sans-serif;
   color: $body-font-col;
   background-image: url(../../img/ioccc_donut.jpg);
   background-size: cover;
@@ -54,6 +55,11 @@
   background-image: url(../../img/nm-img.png);
 }
 
+.card-2 {
+  background-image: url(../../img/oolio.png);
+  background-position: center;
+}
+
 .card:hover,
 .card:focus-within {
   transform: scale(1.05);
@@ -70,9 +76,7 @@
   height: auto;
   width: 100%;
   background: linear-gradient(
-    hsl(212 25% 12% / 0.0),
-    hsl(212 25% 12% / 0.2) 5%,
-    hsl(212 25% 12% / 0.4) 10%,
+    hsl(212 25% 12% / 0.0) 4%,
     hsl(212 25% 12% / 0.8) 15%,
     hsl(212 25% 12% / 1)
   );
@@ -170,7 +174,7 @@
 
 @media (hover) {
   .card--content {
-    transform: translateY(280px);
+    transform: translateY(290px);
     transition: transform 500ms ease;
   }
 
@@ -253,4 +257,27 @@
     transition-delay: 0ms
     !important;
   }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active){
+  #ie {
+    width: 335px !important;
+  }
+  .card--content {
+    background: $card-bg-col;
+    padding: 5px;
+  }
+
+  .card--content-1 {
+    transform: translateY(155px);
+  }
+
+  .card--content-2,
+  .card--content-3,
+  .card--content-4,
+  .card--content-5,
+  .card--content-6 {
+    transform: translateY(122px);
+  }
+
 }

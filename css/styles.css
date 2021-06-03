@@ -471,6 +471,7 @@ body {
 }
 
 .card {
+  font-family: "DM Sans", sans-serif;
   color: #DD9069;
   background-image: url(../../img/ioccc_donut.jpg);
   background-size: cover;
@@ -488,6 +489,11 @@ body {
   background-image: url(../../img/nm-img.png);
 }
 
+.card-2 {
+  background-image: url(../../img/oolio.png);
+  background-position: center;
+}
+
 .card:hover,
 .card:focus-within {
   transform: scale(1.05);
@@ -503,7 +509,7 @@ body {
   padding: var(--padding);
   height: auto;
   width: 100%;
-  background: linear-gradient(rgba(23, 30, 38, 0), rgba(23, 30, 38, 0.2) 5%, rgba(23, 30, 38, 0.4) 10%, rgba(23, 30, 38, 0.8) 15%, #171e26);
+  background: linear-gradient(rgba(23, 30, 38, 0) 4%, rgba(23, 30, 38, 0.8) 15%, #171e26);
 }
 
 .card--content-1 {
@@ -593,7 +599,7 @@ body {
 
 @media (hover) {
   .card--content {
-    transform: translateY(280px);
+    transform: translateY(290px);
     transition: transform 500ms ease;
   }
 
@@ -661,6 +667,28 @@ body {
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
     transition-delay: 0ms !important;
+  }
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  #ie {
+    width: 335px !important;
+  }
+
+  .card--content {
+    background: #232d3a;
+    padding: 5px;
+  }
+
+  .card--content-1 {
+    transform: translateY(155px);
+  }
+
+  .card--content-2,
+.card--content-3,
+.card--content-4,
+.card--content-5,
+.card--content-6 {
+    transform: translateY(122px);
   }
 }
 .footer-aligner {
