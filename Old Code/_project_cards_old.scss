@@ -1,0 +1,146 @@
+@use "../abstracts" as *;
+
+// Portfolio Project Cards
+.card-aligner {
+  height: 100%;
+  width: 100%;
+  background-color: $bg-col;
+  padding: 20px 0;
+  box-shadow: inset 0 0 12px black;
+  display: flex;
+  justify-content: center;
+}
+.card-wrapper {
+  display: flex;
+  flex-wrap:  wrap;
+  justify-content: center;
+  background-color: $bg-col;
+  padding: 5px;
+  margin: 10px;
+  overflow: visible;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 350px;
+  height: 380px;
+  background-color: $footer-bg-col;
+  border-radius: 5px 5px 0 0 ;
+  margin: 10px;
+  box-shadow: 0 0 12px black;
+
+  &:hover {
+    .card__p {
+      display: block;
+    }
+  }
+
+  &__img {
+    height: 240px;
+    width: 100%;
+    border-radius: 5px;
+    background-image: url(../img/ioccc_donut_small.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__img1 {
+    background-image: url(../img/netmatters-image.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:  cover;
+  }
+
+  &--img-grow {
+    transition: all .25s ease-in-out;
+  }
+
+  &--img-grow:hover {
+    transform: scale(1.05);
+    opacity: 0.7;
+    position: relative;
+  }
+
+
+  &__flex-break {
+  }
+
+  &__img,
+  &__link {
+    margin-bottom: 10px;
+  }
+
+  &__title,
+  &__link {
+    width: 100%;
+    text-align: left;
+    color: $sb-font-col;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  &__p {
+    margin: 5px 15px 10px 15px;
+    color: $crd-highlight;
+    font-family: 'DM Sans', sans-serif;
+    letter-spacing: 1.1px;
+    line-height: 20px;
+    display: none;
+  }
+
+  &__title {
+    margin: 0 0 5px 15px;
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+  &__link {
+    color: $crd-highlight;
+    margin-left: 30px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+
+    &-text:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__arrow {
+    font-size: 15px;
+  }
+}
+
+.card {
+  @media (min-width:$mobile) {
+  }
+  @media (min-width:$tablet) {
+  }
+  @media (min-width:$medium) {
+
+  }
+  @media (min-width:$large) {
+    max-width: 276.6px;
+    width: 100%;
+  }
+
+}
+
+.card-wrapper {
+  @media (min-width:$mobile) {
+  }
+  @media (min-width:$tablet) {
+    width: 760px;
+  }
+  @media (min-width:$medium) {
+
+  }
+  @media (min-width:$large) {
+    width: 900px;
+    justify-content: space-between;
+  }
+
+}

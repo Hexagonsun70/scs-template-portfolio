@@ -19,6 +19,7 @@
   display: flex;
   justify-content: center;
 }
+
 .card-wrapper {
   display: flex;
   flex-wrap:  wrap;
@@ -60,6 +61,11 @@
   background-position: center;
 }
 
+.card-3 {
+  background-image: url(../../img/css-animation.gif);
+  background-position: center;
+}
+
 .card:hover,
 .card:focus-within {
   transform: scale(1.05);
@@ -89,8 +95,14 @@
   transform: translateY(150px);
 }
 
-.card--content-2,
-.card--content-3,
+.card--content-2 {
+  transform: translateY(170px);
+}
+
+.card--content-3 {
+  transform: translateY(165px);
+}
+
 .card--content-4,
 .card--content-5,
 .card--content-6 {
@@ -193,13 +205,13 @@
 
   .card:hover .card--content-2,
   .card:focus-within .card--content-2 {
-    transform: translateY(40%);
+    transform: translateY(75%);
     transition-delay: 500ms;
   }
 
   .card:hover .card--content-3,
   .card:focus-within .card--content-3 {
-    transform: translateY(40%);
+    transform: translateY(90%);
     transition-delay: 500ms;
   }
 
