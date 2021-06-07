@@ -65,88 +65,124 @@
   </div>
 
 <!-- Sidebar End -->
-<!-- Hero Begin -->
-
-<!--
-     Here the subtitle is empty and the content of the bottom two divs is
-     commented out so that flex works the same without having to change the
-     html or styling.
--->
+<!-- Code Example Begins -->
 
   <main>
-    <div class="code-wrapper">
-      <div class="code">
-        <div class="code__example code__example-1">
-          <a href="netmatters_facsimile.html" class="code__link">
-            Netmatters Facsimile
-          </a>
-        </div>
-        <div class="code__spacer"></div>
-        <div class="code__example code__example-2">
-          <a href="" class="code__link code__link-2">
-            Axure Shopfront Presentation
-          </a>
-        </div>
-        <div class="code__spacer"></div>
-        <div class="code__example code__example-3">
-          <a href="" class="code__link">
-            3D Animation in pure CSS
-          </a>
-        </div>
-        <div class="code-wrapper">
-        <pre class="code-container">
+    <body>
+    <div class="gradient-banner">Netmatters Fascimile</div>
+  <div class="content-aligner"></div>
+    <div class="code-aligner">
+    <div class="code">
+
+      <p class="code__p">
+The scale variable allows scale to be a boolean enabling hover visibility.
+arrow size allows the calc() function to be used to position the arrow and arrow
+box relative to each other
+      </p>
+      <div class="code__wrapper">
+        <pre class="code__container">
           <code class="language-css">
-.hero--glitch {
-  font-size:      1.5rem;
-  font-weight:    700;
-  color:          $sb-font-col;
-  text-transform: uppercase;
-  position:       relative;
-  letter-spacing: 5px;
+  .arrow-box, .arrow{
 
-  margin-top: 40px;
+    --scale: 0;
+    --arrow-size: 30px;
 
-  text-shadow:
-    0.05em 0 0 $glitch-col-1,
-    -0.025em -0.05em 0 $glitch-col-2,
-    0.025em 0.05em 0 $glitch-col-3;
 
-  animation: glitch 50ms infinite;
-}
-
-@keyframes glitch {
-  0% {
-    text-shadow:
-      0.05em 0 0 $glitch-col-1,
-      -0.05em -0.025em 0 $glitch-col-2,
-      -0.025em 0.05em 0 $glitch-col-3;
+    position:  absolute;
+    left:      50%;
+    transform: translatex(-50%)
+               translateY(var(--translate-y, 0))
+               scale(var(--scale));
+    top:       -.25rem;
   }
-  25% {
-    text-shadow:
-      -0.05em -0.025em 0 $glitch-col-1,
-      0.025em 0.025em 0 $glitch-col-2,
-      -0.05em -0.05em 0 $glitch-col-3;
-  }
+          </code>
+        </pre>
+      </div>
 
-  50% {
-    text-shadow:
-      0.025em 0.05em 0 $glitch-col-1,
-      0.05em 0 0 $glitch-col-2,
-      0 -0.05em 0 $glitch-col-3;
-  }
 
-  75% {
-    text-shadow:
-      -0.025em 0 0 $glitch-col-1,
-      -0.025em -0.025em 0 $glitch-col-2,
-      -0.025em -0.05em 0 $glitch-col-3;
+      <p class="code__p"></p>
+      <div class="code__wrapper">
+        <pre class="code__container">
+          <code class="language-css">
+.client-img:hover {
+  .arrow-box {
+    --scale: 1;
+  }
+  .arrow {
+    --scale: 1;
   }
 }
           </code>
         </pre>
-        </div>
+      </div>
+
+
+        <p class="code__p">
+this calculation subtracts the arrow size from the y-translate so that it can
+be positioned relative to the arrow.
+        </p>
+        <div class="code__wrapper">
+        <pre class="code__container">
+          <code class="language-css">
+.arrow-box {
+  --translate-y: calc(-100% - var(--arrow-size));
+
+  width:         260px;
+  height:        auto;
+  padding:       20px;
+  font-family:   poppins;
+  text-align:    center;
+  color:         white;
+  background:    $dark-bg;
+}
+          </code>
+        </pre>
+      </div>
+
+
+        <p class="code__p"></p>
+        <div class="code__wrapper">
+        <pre class="code__container">
+          <code class="language-css">
+.arrow {
+  --translate-y:    calc(-1 * var(--arrow-size));
+
+  border:           var(--arrow-size) solid transparent;
+  border-top-color: $dark-bg;
+}
+          </code>
+        </pre>
+      </div>
+
+
+        <p class="code__p"></p>
+        <div class="code__wrapper">
+        <pre class="code__container">
+          <code class="language-css">
+.client-img h3 {
+  letter-spacing: 0.4px;
+  line-height:    20px;
+  font-size:      18px;
+}
+
+.tt-line {
+  border-bottom: white 3px solid;
+  width:         28px;
+  display:       inline-block;
+  margin:        10px 0;
+}
+
+.client-img p {
+  line-height:    22px;
+  letter-spacing: 0.4px;
+  font-size:      13px;
+}
+          </code>
+        </pre>
       </div>
     </div>
+  </div>
+  </body>
   </main>
 
 <!-- Hero End  -->
