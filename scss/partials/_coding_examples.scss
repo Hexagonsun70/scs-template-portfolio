@@ -1,25 +1,16 @@
 @use "../abstracts" as *;
 
+// Linear gradient and clip path for gradient-banner is at the end of document.
 .gradient-banner {
-  height: 25rem;
+  height: 15rem;
   width: 100%;
   position: absolute;
   z-index: 2;
-  text-align: center;
-  padding-top: 8rem;
-  font-size: 50px;
-  color: $footer-bg-col;
-  background: rgb(229,170,140);
-  background: -moz-linear-gradient(107deg, rgba(229,170,140,1) 9%, rgba(90,180,144,1) 38%, rgba(73,174,159,1) 80%, rgba(94,168,2,1) 100%);
-  background: -webkit-linear-gradient(107deg, rgba(229,170,140,1) 9%, rgba(90,180,144,1) 38%, rgba(73,174,159,1) 80%, rgba(94,168,2,1) 100%);
-  background: linear-gradient(107deg, rgba(229,170,140,1) 9%, rgba(90,180,144,1) 38%, rgba(73,174,159,1) 80%, rgba(94,168,2,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e5aa8c",endColorstr="#5ea802",GradientType=1);
 }
 
 .content-aligner {
   background: $footer-bg-col;
   width: 100%;
-  padding: 33em 4em 4em 4em;
   height: 2300px;
   z-index: 0;
   position: absolute;
@@ -28,6 +19,15 @@
 .code-aligner {
   display: flex;
   justify-content: center;
+  position: relative;
+  z-index: 8;
+}
+
+.code-aligner::before {
+  content: 'Netmatters Facsimile';
+  color: $footer-bg-col;
+  font-size: 50px;
+  padding-top: 50px;
 }
 
 .code {
@@ -41,24 +41,11 @@
   border-radius: 8px;
   width: 80ch;
   padding: 4rem;
-  margin-left: 0;
 
-  @media (min-width:500px) {
-    margin-left: 130px;
-  }
-  @media (min-width:$tablet) {
-    margin-left: 140px;
-  }
-  @media (min-width:$medium) {
-    margin-left: 150px;
-  }
-  @media (min-width:$large) {
-    margin-left: 160px;
-  }
-  
   &__p {
     width: 50ch;
     color: hsl(15,57%,73%);
+    font-size: 20px;
     padding: 0.5em 0 0.5em 0;
   }
 
@@ -71,18 +58,132 @@
   &__container {
     width: auto;
     border-radius: 8px;
-    display: flex;
-    justify-content: center;
+    // display: flex;
+    // justify-content: center;
+  }
+}
+//
+// .language-css,
+// .language-css::before,
+// .language-css::after {
+//   box-sizing: content-box;
+// }
+
+.gradient-banner {
+  height: 400px;
+  @media (min-width:$tablet) {
+    height: 225px;
+  }
+  @media (min-width:$medium) {
+    height: 250px;
+  }
+  @media (min-width:$large) {
+  }
+
+}
+
+.content-aligner {
+  @media (min-width:$mobile) {
+  }
+  @media (min-width:$tablet) {
+  }
+  @media (min-width:$medium) {
+  }
+  @media (min-width:$large) {
+  }
+
+}
+
+.code-aligner::before {
+  font-size: 30px;
+  @media (min-width:$mobile) {
+  }
+  @media (min-width:$tablet) {
+    font-size: 40px;
+  }
+  @media (min-width:$medium) {
+    font-size: 50px;
+  }
+  @media (min-width:$large) {
+    font-size: 60px;
   }
 }
 
-.language-css,
-.language-css::before,
-.language-css::after {
-  box-sizing: content-box;
+.code {
+  margin-top: 11.5rem;
+  width: 340px;
+  padding: 10px;
+  &__p {
+    width: 300px;
+  }
+  &__container {
+    width: 300px;
+  }
+  &::before {
+    font-size:20px;
+  }
+
+  @media (min-width:600px) {
+    width: 400px;
+    &__p {
+      width: 350px;
+    }
+    &__container {
+      width: 368px;
+    }
+  }
+
+  @media (min-width:$tablet) {
+    margin-top: 13rem;
+    width: 600px;
+    padding: 10px;
+    &__p {
+      width: 500px;
+    }
+    &__container {
+      width: auto;
+    }
+    &::before {
+      font-size:20px;
+    }
+
+  }
+  @media (min-width:$medium) {
+      margin-top: 14rem;
+      width: 800px;
+  }
+  @media (min-width:$large) {
+  }
+
 }
 
 .gradient-banner {
+
+//   background: rgb(229,170,140);
+// background: -moz-linear-gradient(130deg, rgba(229,170,140,1) 19%, rgba(90,180,144,1) 37%, rgba(73,174,159,1) 60%, rgba(116,142,73,1) 76%);
+// background: -webkit-linear-gradient(130deg, rgba(229,170,140,1) 19%, rgba(90,180,144,1) 37%, rgba(73,174,159,1) 60%, rgba(116,142,73,1) 76%);
+// background: linear-gradient(130deg, rgba(229,170,140,1) 19%, rgba(90,180,144,1) 37%, rgba(73,174,159,1) 60%, rgba(116,142,73,1) 76%);
+// filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e5aa8c",endColorstr="#748e49",GradientType=1);
+//   background: rgb(229,170,140);
+// background: -moz-linear-gradient(130deg, rgba(229,170,140,1) 19%, rgba(90,180,144,1) 37%, rgba(73,174,159,1) 64%, rgba(116,142,73,1) 83%);
+// background: -webkit-linear-gradient(130deg, rgba(229,170,140,1) 19%, rgba(90,180,144,1) 37%, rgba(73,174,159,1) 64%, rgba(116,142,73,1) 83%);
+// background: linear-gradient(130deg, rgba(229,170,140,1) 19%, rgba(90,180,144,1) 37%, rgba(73,174,159,1) 64%, rgba(116,142,73,1) 83%);
+// filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e5aa8c",endColorstr="#748e49",GradientType=1);
+  // background: rgb(229,170,140);
+  // background: -moz-linear-gradient(130deg, rgba(229,170,140,1) 19%, rgba(90,180,144,1) 37%, rgba(73,174,159,1) 64%, rgba(94,168,2,1) 79%);
+  // background: -webkit-linear-gradient(130deg, rgba(229,170,140,1) 19%, rgba(90,180,144,1) 37%, rgba(73,174,159,1) 64%, rgba(94,168,2,1) 79%);
+  // background: linear-gradient(130deg, rgba(229,170,140,1) 19%, rgba(90,180,144,1) 37%, rgba(73,174,159,1) 64%, rgba(94,168,2,1) 79%);
+  // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e5aa8c",endColorstr="#5ea802",GradientType=1);
+  background: rgb(229,170,140);
+  background: -moz-linear-gradient(130deg, rgba(229,170,140,1) 19%, rgba(90,180,144,1) 37%, rgba(73,174,159,1) 72%, rgba(94,168,2,1) 92%);
+  background: -webkit-linear-gradient(130deg, rgba(229,170,140,1) 19%, rgba(90,180,144,1) 37%, rgba(73,174,159,1) 72%, rgba(94,168,2,1) 92%);
+  background: linear-gradient(130deg, rgba(229,170,140,1) 19%, rgba(90,180,144,1) 37%, rgba(73,174,159,1) 72%, rgba(94,168,2,1) 92%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e5aa8c",endColorstr="#5ea802",GradientType=1);
+  // background: rgb(229,170,140);
+  // background: -moz-linear-gradient(107deg, rgba(229,170,140,1) 9%, rgba(90,180,144,1) 38%, rgba(73,174,159,1) 80%, rgba(94,168,2,1) 100%);
+  // background: -webkit-linear-gradient(107deg, rgba(229,170,140,1) 9%, rgba(90,180,144,1) 38%, rgba(73,174,159,1) 80%, rgba(94,168,2,1) 100%);
+  // background: linear-gradient(107deg, rgba(229,170,140,1) 9%, rgba(90,180,144,1) 38%, rgba(73,174,159,1) 80%, rgba(94,168,2,1) 100%);
+  // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e5aa8c",endColorstr="#5ea802",GradientType=1);
   clip-path: polygon(
   100% 0,
   0 0,

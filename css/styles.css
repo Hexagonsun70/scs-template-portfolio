@@ -1085,23 +1085,15 @@ textarea {
   }
 }
 .gradient-banner {
-  height: 25rem;
+  height: 15rem;
   width: 100%;
   position: absolute;
   z-index: 2;
-  text-align: center;
-  padding-top: 8rem;
-  font-size: 50px;
-  color: #171E26;
-  background: #e5aa8c;
-  background: linear-gradient(107deg, #e5aa8c 9%, #5ab490 38%, #49ae9f 80%, #5ea802 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e5aa8c",endColorstr="#5ea802",GradientType=1);
 }
 
 .content-aligner {
   background: #171E26;
   width: 100%;
-  padding: 33em 4em 4em 4em;
   height: 2300px;
   z-index: 0;
   position: absolute;
@@ -1110,6 +1102,15 @@ textarea {
 .code-aligner {
   display: flex;
   justify-content: center;
+  position: relative;
+  z-index: 8;
+}
+
+.code-aligner::before {
+  content: "Netmatters Facsimile";
+  color: #171E26;
+  font-size: 50px;
+  padding-top: 50px;
 }
 
 .code {
@@ -1123,31 +1124,11 @@ textarea {
   border-radius: 8px;
   width: 80ch;
   padding: 4rem;
-  margin-left: 0;
-}
-@media (min-width: 500px) {
-  .code {
-    margin-left: 130px;
-  }
-}
-@media (min-width: 768px) {
-  .code {
-    margin-left: 140px;
-  }
-}
-@media (min-width: 992px) {
-  .code {
-    margin-left: 150px;
-  }
-}
-@media (min-width: 1260px) {
-  .code {
-    margin-left: 160px;
-  }
 }
 .code__p {
   width: 50ch;
   color: #e1a793;
+  font-size: 20px;
   padding: 0.5em 0 0.5em 0;
 }
 .code__wrapper {
@@ -1158,17 +1139,91 @@ textarea {
 .code__container {
   width: auto;
   border-radius: 8px;
-  display: flex;
-  justify-content: center;
-}
-
-.language-css,
-.language-css::before,
-.language-css::after {
-  box-sizing: content-box;
 }
 
 .gradient-banner {
+  height: 400px;
+}
+@media (min-width: 768px) {
+  .gradient-banner {
+    height: 225px;
+  }
+}
+@media (min-width: 992px) {
+  .gradient-banner {
+    height: 250px;
+  }
+}
+.code-aligner::before {
+  font-size: 30px;
+}
+@media (min-width: 768px) {
+  .code-aligner::before {
+    font-size: 40px;
+  }
+}
+@media (min-width: 992px) {
+  .code-aligner::before {
+    font-size: 50px;
+  }
+}
+@media (min-width: 1260px) {
+  .code-aligner::before {
+    font-size: 60px;
+  }
+}
+
+.code {
+  margin-top: 11.5rem;
+  width: 340px;
+  padding: 10px;
+}
+.code__p {
+  width: 300px;
+}
+.code__container {
+  width: 300px;
+}
+.code::before {
+  font-size: 20px;
+}
+@media (min-width: 600px) {
+  .code {
+    width: 400px;
+  }
+  .code__p {
+    width: 350px;
+  }
+  .code__container {
+    width: 368px;
+  }
+}
+@media (min-width: 768px) {
+  .code {
+    margin-top: 13rem;
+    width: 600px;
+    padding: 10px;
+  }
+  .code__p {
+    width: 500px;
+  }
+  .code__container {
+    width: auto;
+  }
+  .code::before {
+    font-size: 20px;
+  }
+}
+@media (min-width: 992px) {
+  .code {
+    margin-top: 14rem;
+    width: 800px;
+  }
+}
+.gradient-banner {
+  background: #e5aa8c;
+  background: linear-gradient(130deg, #e5aa8c 19%, #5ab490 37%, #49ae9f 72%, #5ea802 92%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e5aa8c",endColorstr="#5ea802",GradientType=1);
   -webkit-clip-path: polygon(100% 0, 0 0, 0 77.5%, 1% 77.4%, 2% 77.1%, 3% 76.6%, 4% 75.9%, 5% 75.05%, 6% 74.05%, 7% 72.95%, 8% 71.75%, 9% 70.55%, 10% 69.3%, 11% 68.05%, 12% 66.9%, 13% 65.8%, 14% 64.8%, 15% 64%, 16% 63.35%, 17% 62.85%, 18% 62.6%, 19% 62.5%, 20% 62.65%, 21% 63%, 22% 63.5%, 23% 64.2%, 24% 65.1%, 25% 66.1%, 26% 67.2%, 27% 68.4%, 28% 69.65%, 29% 70.9%, 30% 72.15%, 31% 73.3%, 32% 74.35%, 33% 75.3%, 34% 76.1%, 35% 76.75%, 36% 77.2%, 37% 77.45%, 38% 77.5%, 39% 77.3%, 40% 76.95%, 41% 76.4%, 42% 75.65%, 43% 74.75%, 44% 73.75%, 45% 72.6%, 46% 71.4%, 47% 70.15%, 48% 68.9%, 49% 67.7%, 50% 66.55%, 51% 65.5%, 52% 64.55%, 53% 63.75%, 54% 63.15%, 55% 62.75%, 56% 62.55%, 57% 62.5%, 58% 62.7%, 59% 63.1%, 60% 63.7%, 61% 64.45%, 62% 65.4%, 63% 66.45%, 64% 67.6%, 65% 68.8%, 66% 70.05%, 67% 71.3%, 68% 72.5%, 69% 73.6%, 70% 74.65%, 71% 75.55%, 72% 76.35%, 73% 76.9%, 74% 77.3%, 75% 77.5%, 76% 77.45%, 77% 77.25%, 78% 76.8%, 79% 76.2%, 80% 75.4%, 81% 74.45%, 82% 73.4%, 83% 72.25%, 84% 71.05%, 85% 69.8%, 86% 68.55%, 87% 67.35%, 88% 66.2%, 89% 65.2%, 90% 64.3%, 91% 63.55%, 92% 63%, 93% 62.65%, 94% 62.5%, 95% 62.55%, 96% 62.8%, 97% 63.3%, 98% 63.9%, 99% 64.75%, 100% 65.7%);
           clip-path: polygon(100% 0, 0 0, 0 77.5%, 1% 77.4%, 2% 77.1%, 3% 76.6%, 4% 75.9%, 5% 75.05%, 6% 74.05%, 7% 72.95%, 8% 71.75%, 9% 70.55%, 10% 69.3%, 11% 68.05%, 12% 66.9%, 13% 65.8%, 14% 64.8%, 15% 64%, 16% 63.35%, 17% 62.85%, 18% 62.6%, 19% 62.5%, 20% 62.65%, 21% 63%, 22% 63.5%, 23% 64.2%, 24% 65.1%, 25% 66.1%, 26% 67.2%, 27% 68.4%, 28% 69.65%, 29% 70.9%, 30% 72.15%, 31% 73.3%, 32% 74.35%, 33% 75.3%, 34% 76.1%, 35% 76.75%, 36% 77.2%, 37% 77.45%, 38% 77.5%, 39% 77.3%, 40% 76.95%, 41% 76.4%, 42% 75.65%, 43% 74.75%, 44% 73.75%, 45% 72.6%, 46% 71.4%, 47% 70.15%, 48% 68.9%, 49% 67.7%, 50% 66.55%, 51% 65.5%, 52% 64.55%, 53% 63.75%, 54% 63.15%, 55% 62.75%, 56% 62.55%, 57% 62.5%, 58% 62.7%, 59% 63.1%, 60% 63.7%, 61% 64.45%, 62% 65.4%, 63% 66.45%, 64% 67.6%, 65% 68.8%, 66% 70.05%, 67% 71.3%, 68% 72.5%, 69% 73.6%, 70% 74.65%, 71% 75.55%, 72% 76.35%, 73% 76.9%, 74% 77.3%, 75% 77.5%, 76% 77.45%, 77% 77.25%, 78% 76.8%, 79% 76.2%, 80% 75.4%, 81% 74.45%, 82% 73.4%, 83% 72.25%, 84% 71.05%, 85% 69.8%, 86% 68.55%, 87% 67.35%, 88% 66.2%, 89% 65.2%, 90% 64.3%, 91% 63.55%, 92% 63%, 93% 62.65%, 94% 62.5%, 95% 62.55%, 96% 62.8%, 97% 63.3%, 98% 63.9%, 99% 64.75%, 100% 65.7%);
 }
