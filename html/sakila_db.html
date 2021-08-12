@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/prism.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Questrial&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/466cf648a7.js" crossorigin="anonymous"></script>
+  <link rel="shortcut icon" type"image/png" href="../img/favicon.PNG">
+  <title>Alex McKendrick</title>
+</head>
+
+<body>
+
+<!-- Sidebar Start -->
+
+  <div class="sidebar-wrapper">
+    <div class="sidebar">
+
+      <div class="sidebar__letter-block">
+        <a href="../index.html"><div class="sidebar--letter">AM</div></a>
+      </div>
+
+      <nav class="sidebar__nav-block">
+        <ul class="sidebar__nav-list">
+          <li>
+            <a href="../index.html#cards" class="sidebar__list-item">My Portfolio</a>
+          </li>
+          <li>
+            <a href="/html/coding_examples.html" class="sidebar__list-item" >Coding Examples</a>
+          </li>
+          <li>
+            <a href="/html/scs_scheme.html" class="sidebar__list-item">SCS Scheme</a>
+          </li>
+          <li>
+            <a href="/html/about_me.html"  class="sidebar__list-item">About Me</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="sidebar__contact">
+        <a href="../index.html#contact" class="sidebar--contact">Contact Me</a>
+      </div>
+
+      <div class="sidebar__social-wrapper">
+        <div class="sidebar__social-div">
+          <div>
+            <a href="https://github.com/Hexagonsun70" target="_blank">
+              <i class="sidebar--icons fab fa-github"></i>
+            </a>
+          </div>
+          <!-- social media Icons that aren't being used -->
+
+          <!-- <div><a href="#"><i class="sidebar--icons fab fa-facebook-f"></i></a></div>
+          <div><a href="#"><i class="sidebar--icons fab fa-instagram"></i></a></div>
+          <div><a href="#"><i class="sidebar--icons fab fa-twitter"></i></a></div>
+          <div><a href="#"><i class="sidebar--icons fab fa-linkedin-in"></i></a></div> -->
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+<!-- Sidebar End -->
+<!-- Coding Examples Begins -->
+
+<!--
+Each time a new file is made, a new class needs to be assigned to absolute
+background and code aligner so that the length of the background can be sized to
+the content and the ::before pseudo element title can be named per page. in this
+example it is bg-h-ce for background height: coding example and code-title
+for the pseudo element title to be created.
+-->
+
+
+  <main>
+    <div class="gradient-banner"></div>
+    <div class="absolute-background bg-h-db"></div>
+    <div class="code-aligner db-title">
+      <div class="code">
+      <div class="code__wrapper">
+        <p class="code__p">
+        To test my comprehension of SQL, I decided to find an
+        example database (DB) that had an interesting degree of complexity.
+        <br>
+        <br>
+        After some searching I found Sakila, a DB made by MySQL that is meant to
+        provide a standardised schema to study and work from.
+        <br>
+        <br>
+        </p>
+        <div class="img-align">
+          <img class="coding-example-image" src="../img/sakila_schema.png" alt="">
+        </div>
+        <p class="code__p">
+          Sakila is a well normalised model of a DVD rental store, featuring
+          things like films, actors, film-actor relationships, and a central
+          inventory table that connects films, stores and rentals.
+          <br>
+          <br>
+          To think of an interesting query, I started making simple read queries
+          using inner joins to get an idea of the tables and data I am working
+          with.
+        </p>
+        <pre class="code__container"><code class="language-sql">SELECT release_year,
+       title,
+       name,
+       description,
+       length,
+       first_name,
+       last_name
+FROM film
+JOIN film_category ON
+  film_category.film_id = film.film_id
+JOIN category ON
+  category.category_id = film_category.category_id
+JOIN film_actor ON
+  film_actor.film_id = film.film_id
+JOIN actor ON
+  actor.actor_id = film_actor.actor_id;</code></pre>
+        <p class="code__p">
+          The table produced is a little too large to publish on this page,
+          but if you wish to view it, you can see it
+          <a class="code-link" href="/html/db_tables/sakila_table_1.html">here</a>
+          <br>
+          <br>
+          From this I decided that I wanted part of my query to draw from
+          the film descriptions, titles and actors as I felt it would enable me
+          to use wildcards in an interesting way and give me a chance to
+          concatenate columns.
+          <br>
+          <br>
+          Next I decided to look into the customer and rental tables, as that
+          would give me the opportunity to use the central inventory table to
+          make a more complex query.
+        </p>
+      <pre class="code__container"><code class="language-sql">SELECT  first_name,
+        last_name,
+        country,
+        city,
+        address,
+        postal_code,
+        phone,
+        create_date,
+        email,
+        rental.rental_id,
+        rental_date,
+        amount,
+        payment_date
+FROM country
+JOIN city ON
+  city.country_id = country.country_id
+JOIN address ON
+  address.city_id = city.city_id
+JOIN customer ON
+  customer.address_id = address.address_id
+JOIN rental ON
+  rental.customer_id = customer.customer_id
+JOIN payment ON
+  payment.rental_id = rental.rental_id
+ORDER BY first_name, last_name;</code></pre>
+        <p class="code__p">
+          If you wish to view the table produced, click
+          <a class="code-link" href="">here</a>
+          <br>
+          <br>
+          From this information, I decided to use the rental_date column as that
+          would allow me to use a BETWEEN operator on a date.
+          <br>
+          <br>
+          Here is the final query I came up with:
+        </p>
+        <pre class="code__container"><code class="language-sql">-- Customer, Adrian Clary, rented a film
+-- between the 11th and 28th of July 2005
+-- that included 'monkey' and 'womanizer'
+-- in the description. He wants to know
+-- the title of the film and the actors
+-- that starred in it.
+
+SELECT *
+    FROM (
+    SELECT title,
+		   description,
+           CONCAT(
+                  actor.first_name,
+             ' ', actor.last_name
+                 )
+             AS actor_name,
+           CONCAT(
+                 customer.first_name,
+            ' ', customer.last_name
+                 )
+             AS customer_name,
+           rental.rental_date
+    FROM film
+  	JOIN film_actor ON
+      film_actor.film_id = film.film_id
+    JOIN actor ON
+      actor.actor_id = film_actor.actor_id
+    JOIN inventory ON
+      inventory.film_id = film.film_id
+  	JOIN rental ON
+      rental.inventory_id = inventory.inventory_id
+    JOIN customer ON
+      customer.customer_id = rental.customer_id
+    ) AS query_for_adrian_c
+	WHERE description LIKE '%monkey%%womanizer%'
+	AND rental_date BETWEEN
+      '2005-07-11%' AND '2005-07-28%'
+	AND customer_name = 'Adrian Clary'
+    ORDER BY actor_name;</code></pre>
+    <p class="code__p">
+      First I create a subquery, so that the concatenated customer and actor
+      names can be accessed in the new table created. As I am using MySQL,
+      I use the CONCAT() function to concatenate the first and last name of the
+      actors and customer respectively.
+      <br>
+      <br>
+      Each JOIN are inner joins that just enable each column to be
+      linked to their associated primary and foreign keys.
+      <br>
+      <br>
+      I use a LIKE operator in the WHERE clause and the % wildcard character
+      to search for a 'description' entry with 'monkey' and 'womanizer' anywhere
+      in it.
+      <br>
+      <br>
+      The BETWEEN operator is used to search for a date within the given range.
+      The % wildcard here is used to specify that the time portion of the
+      datetime entry is not necessary for the search.
+      <br>
+      <br>
+      To wrap up the where clause, we make sure we are searching for the
+      information associated with the correct customer (there is a surprising
+      amount of film titles with 'monkey' and 'womanizer' in the description
+      that were rented out between the 11th and 28th July). To do this, we
+      search for 'Adrian Clary' in the column that was aliased 'customer_name'.
+      <br>
+      <br>
+      Finally we order the aliased actor names alphabetically (ASC is the
+      default value of ORDER BY).
+      <br>
+      <br>
+      To view the table produced by this query, click
+      <a href="" class="code-link">here</a>
+    </p>
+    <!-- <pre class="code__container"><code class="language-js"></code></pre> -->
+    <!-- <p class="code__p"></p> -->
+    <!-- <pre class="code__container"><code class="language-js"></code></pre> -->
+    <!-- <p class="code__p"></p> -->
+      </div>
+
+
+      </div>
+    </div>
+  </main>
+
+<!-- Coding examples Ends  -->
+
+<script src="../js/prism.js"></script>
+</body>
+</html>

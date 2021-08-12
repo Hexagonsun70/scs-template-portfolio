@@ -1,0 +1,42 @@
+@use "../abstracts" as *;
+
+.nm-title::before {
+  content: 'Netmatters Facsimile';
+  color: $footer-bg-col;
+  font-size: 50px;
+  padding-top: 50px;
+}
+
+.nm-title::before {
+  padding-top: 35px;
+  font-size: 30px;
+  @media (min-width:$mobile) {
+  }
+  @media (min-width:$tablet) {
+    padding-top: 50px;
+    font-size: 40px;
+  }
+  @media (min-width:$medium) {
+    font-size: 50px;
+  }
+  @media (min-width:$large) {
+    font-size: 60px;
+  }
+}
+
+.bg-h-nm {
+  height: 2125px;
+  @media (min-width:$mobile) {
+    height: 2100px;
+  }
+  @media (min-width:$tablet) {
+      height: 2050px;
+  }
+  @media (min-width:$medium) {
+      height: 2050px;
+  }
+  @media (min-width:$large) {
+      height: 2050px;
+  }
+
+}

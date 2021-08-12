@@ -57,10 +57,10 @@ table {
 *::after,
 *::before {
   box-sizing: border-box;
-  font-family: "DM Sans", sans-serif;
 }
 
 body {
+  font-family: "DM Sans", sans-serif;
   margin-left: 0;
 }
 @media (min-width: 500px) {
@@ -495,11 +495,11 @@ body {
 }
 
 .card-1 {
-  background-image: url(../../img/nm-img.png);
+  background-image: url(../../img/nm-img.PNG);
 }
 
 .card-2 {
-  background-image: url(../../img/oolio.png);
+  background-image: url(../../img/oolio.PNG);
   background-position: center;
 }
 
@@ -1091,10 +1091,9 @@ textarea {
   z-index: 2;
 }
 
-.content-aligner {
+.absolute-background {
   background: #171E26;
   width: 100%;
-  height: 2300px;
   z-index: 0;
   position: absolute;
 }
@@ -1104,13 +1103,6 @@ textarea {
   justify-content: center;
   position: relative;
   z-index: 8;
-}
-
-.code-aligner::before {
-  content: "Netmatters Facsimile";
-  color: #171E26;
-  font-size: 50px;
-  padding-top: 50px;
 }
 
 .code {
@@ -1123,7 +1115,6 @@ textarea {
   align-items: flex-start;
   border-radius: 8px;
   width: 80ch;
-  padding: 4rem;
 }
 .code__p {
   width: 50ch;
@@ -1142,7 +1133,7 @@ textarea {
 }
 
 .gradient-banner {
-  height: 400px;
+  height: 150px;
 }
 @media (min-width: 768px) {
   .gradient-banner {
@@ -1154,11 +1145,14 @@ textarea {
     height: 250px;
   }
 }
+
 .code-aligner::before {
+  padding-top: 35px;
   font-size: 30px;
 }
 @media (min-width: 768px) {
   .code-aligner::before {
+    padding-top: 50px;
     font-size: 40px;
   }
 }
@@ -1174,9 +1168,9 @@ textarea {
 }
 
 .code {
-  margin-top: 11.5rem;
+  margin-top: 8.5rem;
   width: 340px;
-  padding: 10px;
+  padding: 0.5em;
 }
 .code__p {
   width: 300px;
@@ -1202,10 +1196,10 @@ textarea {
   .code {
     margin-top: 13rem;
     width: 600px;
-    padding: 10px;
+    padding: 1.5em 3em;
   }
   .code__p {
-    width: 500px;
+    width: 512px;
   }
   .code__container {
     width: auto;
@@ -1218,12 +1212,207 @@ textarea {
   .code {
     margin-top: 14rem;
     width: 800px;
+    padding: 2em 4em;
+  }
+  .code__p {
+    width: 700px;
   }
 }
 .gradient-banner {
   background: #e5aa8c;
-  background: linear-gradient(130deg, #e5aa8c 19%, #5ab490 37%, #49ae9f 72%, #5ea802 92%);
+  background: linear-gradient(130deg, #e5aa8c 34%, #5ab490 49%, #49ae9f 89%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e5aa8c",endColorstr="#5ea802",GradientType=1);
   -webkit-clip-path: polygon(100% 0, 0 0, 0 77.5%, 1% 77.4%, 2% 77.1%, 3% 76.6%, 4% 75.9%, 5% 75.05%, 6% 74.05%, 7% 72.95%, 8% 71.75%, 9% 70.55%, 10% 69.3%, 11% 68.05%, 12% 66.9%, 13% 65.8%, 14% 64.8%, 15% 64%, 16% 63.35%, 17% 62.85%, 18% 62.6%, 19% 62.5%, 20% 62.65%, 21% 63%, 22% 63.5%, 23% 64.2%, 24% 65.1%, 25% 66.1%, 26% 67.2%, 27% 68.4%, 28% 69.65%, 29% 70.9%, 30% 72.15%, 31% 73.3%, 32% 74.35%, 33% 75.3%, 34% 76.1%, 35% 76.75%, 36% 77.2%, 37% 77.45%, 38% 77.5%, 39% 77.3%, 40% 76.95%, 41% 76.4%, 42% 75.65%, 43% 74.75%, 44% 73.75%, 45% 72.6%, 46% 71.4%, 47% 70.15%, 48% 68.9%, 49% 67.7%, 50% 66.55%, 51% 65.5%, 52% 64.55%, 53% 63.75%, 54% 63.15%, 55% 62.75%, 56% 62.55%, 57% 62.5%, 58% 62.7%, 59% 63.1%, 60% 63.7%, 61% 64.45%, 62% 65.4%, 63% 66.45%, 64% 67.6%, 65% 68.8%, 66% 70.05%, 67% 71.3%, 68% 72.5%, 69% 73.6%, 70% 74.65%, 71% 75.55%, 72% 76.35%, 73% 76.9%, 74% 77.3%, 75% 77.5%, 76% 77.45%, 77% 77.25%, 78% 76.8%, 79% 76.2%, 80% 75.4%, 81% 74.45%, 82% 73.4%, 83% 72.25%, 84% 71.05%, 85% 69.8%, 86% 68.55%, 87% 67.35%, 88% 66.2%, 89% 65.2%, 90% 64.3%, 91% 63.55%, 92% 63%, 93% 62.65%, 94% 62.5%, 95% 62.55%, 96% 62.8%, 97% 63.3%, 98% 63.9%, 99% 64.75%, 100% 65.7%);
           clip-path: polygon(100% 0, 0 0, 0 77.5%, 1% 77.4%, 2% 77.1%, 3% 76.6%, 4% 75.9%, 5% 75.05%, 6% 74.05%, 7% 72.95%, 8% 71.75%, 9% 70.55%, 10% 69.3%, 11% 68.05%, 12% 66.9%, 13% 65.8%, 14% 64.8%, 15% 64%, 16% 63.35%, 17% 62.85%, 18% 62.6%, 19% 62.5%, 20% 62.65%, 21% 63%, 22% 63.5%, 23% 64.2%, 24% 65.1%, 25% 66.1%, 26% 67.2%, 27% 68.4%, 28% 69.65%, 29% 70.9%, 30% 72.15%, 31% 73.3%, 32% 74.35%, 33% 75.3%, 34% 76.1%, 35% 76.75%, 36% 77.2%, 37% 77.45%, 38% 77.5%, 39% 77.3%, 40% 76.95%, 41% 76.4%, 42% 75.65%, 43% 74.75%, 44% 73.75%, 45% 72.6%, 46% 71.4%, 47% 70.15%, 48% 68.9%, 49% 67.7%, 50% 66.55%, 51% 65.5%, 52% 64.55%, 53% 63.75%, 54% 63.15%, 55% 62.75%, 56% 62.55%, 57% 62.5%, 58% 62.7%, 59% 63.1%, 60% 63.7%, 61% 64.45%, 62% 65.4%, 63% 66.45%, 64% 67.6%, 65% 68.8%, 66% 70.05%, 67% 71.3%, 68% 72.5%, 69% 73.6%, 70% 74.65%, 71% 75.55%, 72% 76.35%, 73% 76.9%, 74% 77.3%, 75% 77.5%, 76% 77.45%, 77% 77.25%, 78% 76.8%, 79% 76.2%, 80% 75.4%, 81% 74.45%, 82% 73.4%, 83% 72.25%, 84% 71.05%, 85% 69.8%, 86% 68.55%, 87% 67.35%, 88% 66.2%, 89% 65.2%, 90% 64.3%, 91% 63.55%, 92% 63%, 93% 62.65%, 94% 62.5%, 95% 62.55%, 96% 62.8%, 97% 63.3%, 98% 63.9%, 99% 64.75%, 100% 65.7%);
+}
+
+.bg-code-ex {
+  height: 1300px;
+}
+
+.code-title::before {
+  content: "Coding Examples";
+  color: #171E26;
+  font-size: 50px;
+  padding-top: 50px;
+}
+
+.code-1 {
+  padding: 30px 0 30px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  border-radius: 0;
+  box-shadow: inset 0 0 12px black;
+  z-index: 1;
+  transform: translateY(25px);
+}
+.code-1--links {
+  font-size: 30px;
+}
+.code-title::before {
+  padding-top: 35px;
+  font-size: 30px;
+}
+@media (min-width: 768px) {
+  .code-title::before {
+    padding-top: 50px;
+    font-size: 40px;
+  }
+}
+@media (min-width: 992px) {
+  .code-title::before {
+    font-size: 50px;
+  }
+}
+@media (min-width: 1260px) {
+  .code-title::before {
+    font-size: 60px;
+  }
+}
+
+.nm-title::before {
+  content: "Netmatters Facsimile";
+  color: #171E26;
+  font-size: 50px;
+  padding-top: 50px;
+}
+
+.nm-title::before {
+  padding-top: 35px;
+  font-size: 30px;
+}
+@media (min-width: 768px) {
+  .nm-title::before {
+    padding-top: 50px;
+    font-size: 40px;
+  }
+}
+@media (min-width: 992px) {
+  .nm-title::before {
+    font-size: 50px;
+  }
+}
+@media (min-width: 1260px) {
+  .nm-title::before {
+    font-size: 60px;
+  }
+}
+
+.bg-h-nm {
+  height: 2125px;
+}
+@media (min-width: 425px) {
+  .bg-h-nm {
+    height: 2100px;
+  }
+}
+@media (min-width: 768px) {
+  .bg-h-nm {
+    height: 2050px;
+  }
+}
+@media (min-width: 992px) {
+  .bg-h-nm {
+    height: 2050px;
+  }
+}
+@media (min-width: 1260px) {
+  .bg-h-nm {
+    height: 2050px;
+  }
+}
+
+.db-title::before {
+  content: "SQL Queries in Sakila DB";
+  color: #171E26;
+  font-size: 50px;
+  padding-top: 50px;
+}
+
+.code-link {
+  text-decoration: underline;
+  color: #e5aa8c;
+}
+
+.coding-example-image {
+  width: 100%;
+  transition: transform 0.25s ease;
+}
+
+.coding-example-image:hover {
+  transform: scale(1.5);
+}
+
+.code__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.db-title::before {
+  padding-top: 35px;
+  font-size: 30px;
+}
+@media (min-width: 768px) {
+  .db-title::before {
+    padding-top: 50px;
+    font-size: 40px;
+  }
+}
+@media (min-width: 992px) {
+  .db-title::before {
+    font-size: 50px;
+  }
+}
+@media (min-width: 1260px) {
+  .db-title::before {
+    font-size: 60px;
+  }
+}
+
+.bg-h-db {
+  height: 4620px;
+}
+@media (min-width: 425px) {
+  .bg-h-db {
+    height: 4650px;
+  }
+}
+@media (min-width: 768px) {
+  .bg-h-db {
+    height: 4100px;
+  }
+}
+@media (min-width: 992px) {
+  .bg-h-db {
+    height: 4000px;
+  }
+}
+@media (min-width: 1260px) {
+  .bg-h-db {
+    height: 4000px;
+  }
+}
+
+.table-wrapper {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #1C3636;
+  padding: 5px;
+}
+
+.th {
+  color: #e5aa8c;
+  background-color: #171E26;
+}
+
+.td {
+  color: #171E26;
+  background-color: #748E54;
+  border-right: 2px solid #e5aa8c;
+  border-left: 2px solid #e5aa8c;
 }

@@ -27,7 +27,7 @@
       <nav class="sidebar__nav-block">
         <ul class="sidebar__nav-list">
           <li>
-            <a href="../index.html#cards" class="sidebar__list-item">My Portfolio</a>
+            <a href="../index.html#cards" class="sidebar__list-item">Portfolio</a>
           </li>
           <li>
             <a href="/html/coding_examples.html" class="sidebar__list-item" >Coding Examples</a>
@@ -68,10 +68,9 @@
 <!-- Code Example Begins -->
 
   <main>
-    <body>
     <div class="gradient-banner"></div>
-  <div class="content-aligner"></div>
-    <div class="code-aligner">
+    <div class="absolute-background bg-h-nm"></div>
+    <div class="code-aligner nm-title">
     <div class="code">
 
       <p class="code__p">
@@ -80,9 +79,7 @@ arrow size allows the calc() function to be used to position the arrow and arrow
 box relative to each other
       </p>
       <div class="code__wrapper">
-        <pre class="code__container">
-          <code class="language-css">
-.arrow-box,
+        <pre class="code__container"><code class="language-css">.arrow-box,
 .arrow {
 
   --scale: 0;
@@ -95,26 +92,20 @@ box relative to each other
              translateY(var(--translate-y, 0))
              scale(var(--scale));
   top:       -.25rem;
-}
-          </code>
-        </pre>
+}</code></pre>
       </div>
 
 
       <p class="code__p"></p>
       <div class="code__wrapper">
-        <pre class="code__container">
-          <code class="language-css">
-.client-img:hover {
+        <pre class="code__container"><code class="language-css">.client-img:hover { &nbsp; &nbsp;
   .arrow-box {
     --scale: 1;
   }
   .arrow {
     --scale: 1;
   }
-}
-          </code>
-        </pre>
+}</code></pre>
       </div>
 
 
@@ -123,9 +114,7 @@ this calculation subtracts the arrow size from the y-translate so that it can
 be positioned relative to the arrow.
         </p>
         <div class="code__wrapper">
-        <pre class="code__container">
-          <code class="language-css">
-.arrow-box {
+        <pre class="code__container"><code class="language-css">.arrow-box {
   --translate-y: calc(-100% - var(--arrow-size));
 
   width:         260px;
@@ -135,32 +124,24 @@ be positioned relative to the arrow.
   text-align:    center;
   color:         white;
   background:    $dark-bg;
-}
-          </code>
-        </pre>
+}</code></pre>
       </div>
 
 
         <p class="code__p"></p>
         <div class="code__wrapper">
-        <pre class="code__container">
-          <code class="language-css">
-.arrow {
+        <pre class="code__container"><code class="language-css">.arrow {
   --translate-y:    calc(-1 * var(--arrow-size));
 
   border:           var(--arrow-size) solid transparent;
   border-top-color: $dark-bg;
-}
-          </code>
-        </pre>
+}</code></pre>
       </div>
 
 
         <p class="code__p"></p>
         <div class="code__wrapper">
-        <pre class="code__container">
-          <code class="language-css">
-.client-img h3 {
+        <pre class="code__container"><code class="language-css">.client-img h3 {
   letter-spacing: 0.4px;
   line-height:    20px;
   font-size:      18px;
@@ -177,13 +158,10 @@ be positioned relative to the arrow.
   line-height:    22px;
   letter-spacing: 0.4px;
   font-size:      13px;
-}
-          </code>
-        </pre>
+}</code></pre>
       </div>
     </div>
   </div>
-  </body>
   </main>
 
 <!-- Hero End  -->

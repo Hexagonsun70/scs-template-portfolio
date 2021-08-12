@@ -1,0 +1,86 @@
+@use "../abstracts" as *;
+
+.db-title::before {
+  content: 'SQL Queries in Sakila DB';
+  color: $footer-bg-col;
+  font-size: 50px;
+  padding-top: 50px;
+}
+
+.code-link {
+  text-decoration: underline;
+  color: $sb-font-col;
+}
+.coding-example-image {
+  width: 100%;
+  transition:transform 0.25s ease;
+}
+
+.coding-example-image:hover {
+    -webkit-transform:scale(1.5);
+    transform:scale(1.5);
+}
+
+.img-align {
+}
+
+.code__wrapper {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.db-title::before {
+  padding-top: 35px;
+  font-size: 30px;
+  @media (min-width:$mobile) {
+  }
+  @media (min-width:$tablet) {
+    padding-top: 50px;
+    font-size: 40px;
+  }
+  @media (min-width:$medium) {
+    font-size: 50px;
+  }
+  @media (min-width:$large) {
+    font-size: 60px;
+  }
+}
+
+.bg-h-db {
+  height: 4620px;
+  @media (min-width:$mobile) {
+    height: 4650px;
+  }
+  @media (min-width:$tablet) {
+      height: 4100px;
+  }
+  @media (min-width:$medium) {
+      height: 4000px;
+  }
+  @media (min-width:$large) {
+      height: 4000px;
+  }
+
+}
+
+.table-wrapper {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: $bg-col;
+  padding: 5px;
+}
+
+.th {
+  color: $sb-font-col;
+  background-color: $sb-bg-col;
+}
+
+.td {
+  color: $sb-bg-col;
+  background-color: $crd-highlight;
+  border-right: 2px solid $sb-font-col;
+  border-left: 2px solid $sb-font-col;
+}

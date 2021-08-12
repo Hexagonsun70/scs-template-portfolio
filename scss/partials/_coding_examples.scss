@@ -8,10 +8,9 @@
   z-index: 2;
 }
 
-.content-aligner {
+.absolute-background {
   background: $footer-bg-col;
   width: 100%;
-  height: 2300px;
   z-index: 0;
   position: absolute;
 }
@@ -23,12 +22,7 @@
   z-index: 8;
 }
 
-.code-aligner::before {
-  content: 'Netmatters Facsimile';
-  color: $footer-bg-col;
-  font-size: 50px;
-  padding-top: 50px;
-}
+
 
 .code {
   position: absolute;
@@ -40,7 +34,7 @@
   align-items: flex-start;
   border-radius: 8px;
   width: 80ch;
-  padding: 4rem;
+
 
   &__p {
     width: 50ch;
@@ -58,47 +52,29 @@
   &__container {
     width: auto;
     border-radius: 8px;
-    // display: flex;
-    // justify-content: center;
   }
 }
-//
-// .language-css,
-// .language-css::before,
-// .language-css::after {
-//   box-sizing: content-box;
-// }
+
 
 .gradient-banner {
-  height: 400px;
+  height: 150px;
+  @media (min-width:500px) {
+  }
   @media (min-width:$tablet) {
     height: 225px;
   }
   @media (min-width:$medium) {
     height: 250px;
   }
-  @media (min-width:$large) {
-  }
-
-}
-
-.content-aligner {
-  @media (min-width:$mobile) {
-  }
-  @media (min-width:$tablet) {
-  }
-  @media (min-width:$medium) {
-  }
-  @media (min-width:$large) {
-  }
-
 }
 
 .code-aligner::before {
+  padding-top: 35px;
   font-size: 30px;
   @media (min-width:$mobile) {
   }
   @media (min-width:$tablet) {
+    padding-top: 50px;
     font-size: 40px;
   }
   @media (min-width:$medium) {
@@ -110,9 +86,9 @@
 }
 
 .code {
-  margin-top: 11.5rem;
+  margin-top: 8.5rem;
   width: 340px;
-  padding: 10px;
+  padding: 0.5em;
   &__p {
     width: 300px;
   }
@@ -136,9 +112,10 @@
   @media (min-width:$tablet) {
     margin-top: 13rem;
     width: 600px;
-    padding: 10px;
+    padding: 1.5em 3em;
+
     &__p {
-      width: 500px;
+      width: 512px;
     }
     &__container {
       width: auto;
@@ -151,6 +128,11 @@
   @media (min-width:$medium) {
       margin-top: 14rem;
       width: 800px;
+      padding: 2em 4em;
+
+      &__p {
+        width: 700px;
+      }
   }
   @media (min-width:$large) {
   }
@@ -175,9 +157,9 @@
   // background: linear-gradient(130deg, rgba(229,170,140,1) 19%, rgba(90,180,144,1) 37%, rgba(73,174,159,1) 64%, rgba(94,168,2,1) 79%);
   // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e5aa8c",endColorstr="#5ea802",GradientType=1);
   background: rgb(229,170,140);
-  background: -moz-linear-gradient(130deg, rgba(229,170,140,1) 19%, rgba(90,180,144,1) 37%, rgba(73,174,159,1) 72%, rgba(94,168,2,1) 92%);
-  background: -webkit-linear-gradient(130deg, rgba(229,170,140,1) 19%, rgba(90,180,144,1) 37%, rgba(73,174,159,1) 72%, rgba(94,168,2,1) 92%);
-  background: linear-gradient(130deg, rgba(229,170,140,1) 19%, rgba(90,180,144,1) 37%, rgba(73,174,159,1) 72%, rgba(94,168,2,1) 92%);
+  background: -moz-linear-gradient(130deg, rgba(229,170,140,1) 34%, rgba(90,180,144,1) 49%, rgba(73,174,159,1) 89%);
+  background: -webkit-linear-gradient(130deg, rgba(229,170,140,1) 34%, rgba(90,180,144,1) 49%, rgba(73,174,159,1) 89%);
+  background: linear-gradient(130deg, rgba(229,170,140,1) 34%, rgba(90,180,144,1) 49%, rgba(73,174,159,1) 89%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e5aa8c",endColorstr="#5ea802",GradientType=1);
   // background: rgb(229,170,140);
   // background: -moz-linear-gradient(107deg, rgba(229,170,140,1) 9%, rgba(90,180,144,1) 38%, rgba(73,174,159,1) 80%, rgba(94,168,2,1) 100%);
