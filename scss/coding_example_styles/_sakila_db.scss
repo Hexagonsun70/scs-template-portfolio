@@ -13,13 +13,13 @@
 }
 .coding-example-image {
   width: 100%;
-  transition:transform 0.25s ease;
+  // transition:transform 0.25s ease;
 }
 
-.coding-example-image:hover {
-    -webkit-transform:scale(1.5);
-    transform:scale(1.5);
-}
+// .coding-example-image:hover {
+//     -webkit-transform:scale(1.5);
+//     transform:scale(1.5);
+// }
 
 .img-align {
 }
@@ -97,15 +97,19 @@
   height: 100vh;
   width: 100%;
   background-color: $bg-col;
+  display: flex;
 }
 
 .table-wrapper {
-  height: auto;
+  // height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
+  // align-items: center;
   background-color: $bg-col;
+  vertical-align: middle;
 }
+
 //
 // th {
 //   color: $sb-font-col;

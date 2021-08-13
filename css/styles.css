@@ -513,6 +513,14 @@ body {
   background-position: center;
 }
 
+.card-4 {
+  background-image: url(../../img/picsum.png);
+}
+
+.card-5 {
+  background-image: url(../../img/sakila_scheme_inv.png);
+}
+
 .card:hover,
 .card:focus-within {
   transform: scale(1.05);
@@ -531,22 +539,25 @@ body {
   background: linear-gradient(rgba(23, 30, 38, 0) 4%, rgba(23, 30, 38, 0.8) 15%, #171e26);
 }
 
+.card--content-4,
+.card--content-6 {
+  transform: translateY(100px);
+}
+
 .card--content-1 {
-  transform: translateY(150px);
+  transform: translateY(155px);
 }
 
 .card--content-2 {
-  transform: translateY(170px);
+  transform: translateY(155px);
 }
 
 .card--content-3 {
-  transform: translateY(165px);
+  transform: translateY(170px);
 }
 
-.card--content-4,
-.card--content-5,
-.card--content-6 {
-  transform: translateY(100px);
+.card--content-5 {
+  transform: translateY(165px);
 }
 
 .card--title {
@@ -648,13 +659,13 @@ body {
 
   .card:hover .card--content-4,
 .card:focus-within .card--content-4 {
-    transform: translateY(40%);
+    transform: translateY(43%);
     transition-delay: 500ms;
   }
 
   .card:hover .card--content-5,
 .card:focus-within .card--content-5 {
-    transform: translateY(40%);
+    transform: translateY(91%);
     transition-delay: 500ms;
   }
 
@@ -1344,11 +1355,6 @@ textarea {
 
 .coding-example-image {
   width: 100%;
-  transition: transform 0.25s ease;
-}
-
-.coding-example-image:hover {
-  transform: scale(1.5);
 }
 
 .code__wrapper {
@@ -1419,12 +1425,13 @@ textarea {
   height: 100vh;
   width: 100%;
   background-color: #1C3636;
+  display: flex;
 }
 
 .table-wrapper {
-  height: auto;
   width: 100%;
   display: flex;
   justify-content: center;
   background-color: #1C3636;
+  vertical-align: middle;
 }
