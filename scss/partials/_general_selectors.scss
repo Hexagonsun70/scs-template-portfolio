@@ -7,6 +7,11 @@
 
 }
 
+input:focus {
+  box-shadow: 0 0 3pt 2pt hsl(170,40%,48%);
+  outline: 1px solid transparent;
+}
+
 body {
   font-family: 'DM Sans', sans-serif;
   // Margin left must be the same width as the sidebar
